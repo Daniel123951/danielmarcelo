@@ -1310,74 +1310,240 @@
         function selectPaymentMethod(method, planName, paymentType, price) {
             let paymentInfo = '';
             let methodName = '';
+            let paymentEmoji = '';
             
             switch(method) {
                 case 'paypal':
                     paymentInfo = 'danielpaypal123951@gmail.com';
                     methodName = 'PayPal';
+                    paymentEmoji = '💙';
                     break;
                 case 'zinli':
                     paymentInfo = 'danielmarcelo123951@gmail.com';
                     methodName = 'Zinli';
+                    paymentEmoji = '💜';
                     break;
                 case 'binance':
                     paymentInfo = 'ID: 197 250 420';
                     methodName = 'Binance';
+                    paymentEmoji = '🟡';
                     break;
             }
             
-            // Create customer WhatsApp message
-            const customerMessage = `Hola Daniel, quiero contratar el plan "${planName}" a ${paymentType} por ${price}. Voy a pagar por ${methodName} (${paymentInfo}). ¿Podrías confirmarme los detalles?`;
-            const customerWhatsappUrl = `https://api.whatsapp.com/send?phone=584147825840&text=${encodeURIComponent(customerMessage)}`;
+            // Get plan details based on plan name
+            let planDetails = '';
+            let deliveryTime = '';
             
-            // Create notification message for Daniel
-            const notificationMessage = `🔔 NUEVA SOLICITUD DE SERVICIO\n\nCliente interesado en:\n📋 Plan: ${planName}\n💰 Precio: ${price} (${paymentType})\n💳 Método de pago: ${methodName}\n📧 Datos de pago: ${paymentInfo}\n\n¡Contacta al cliente para confirmar!`;
-            const notificationWhatsappUrl = `https://api.whatsapp.com/send?phone=584147825840&text=${encodeURIComponent(notificationMessage)}`;
+            if (planName.includes('Menú Wifi')) {
+                planDetails = `✅ Diseño intuitivo y profesional
+✅ Compatible con Routerboard
+✅ Imágenes y colores sobrios
+✅ 3 actualizaciones gratis (6 meses)
+✅ Soporte técnico incluido`;
+                deliveryTime = '48 horas';
+            } else if (planName.includes('Menú QR')) {
+                planDetails = `✅ Diseño intuitivo y profesional
+✅ Imágenes y colores sobrios
+✅ Servicio Cloud por 3 años
+✅ QR digital personalizado
+✅ 3 actualizaciones gratis (6 meses)
+✅ Soporte técnico incluido`;
+                deliveryTime = '48 horas';
+            } else if (planName.includes('Diseño Web')) {
+                planDetails = `✅ Desarrollo en HTML5 & CSS3
+✅ 4 secciones/enlaces principales
+✅ Hosting y Dominio por 1 año
+✅ Botón de WhatsApp integrado
+✅ Diseño responsive (móvil/desktop)
+✅ Optimización SEO básica`;
+                deliveryTime = '4 a 5 días';
+            }
             
+            // Create detailed customer WhatsApp message
+            const customerMessage = `🚀 SOLICITUD DE SERVICIO PROFESIONAL
+
+👋 ¡Hola Daniel! Vi tu portafolio web y quiero contratar tus servicios.
+
+📋 DETALLES DE LO QUE QUIERO:
+• Servicio: ${planName}
+• Modalidad de pago: ${paymentType.toUpperCase()}
+• Precio acordado: ${price}
+• Tiempo de entrega: ${deliveryTime}
+
+${paymentEmoji} QUIERO PAGAR CON:
+• Plataforma: ${methodName}
+• Datos de pago: ${paymentInfo}
+
+📦 ESPECIFICACIONES QUE INCLUYE:
+${planDetails}
+
+💬 NECESITO QUE NOS PONGAMOS DE ACUERDO CON:
+• La estructura exacta del proyecto
+• Los detalles específicos de diseño
+• El cronograma de trabajo
+• El enlace de pago de ${methodName}
+• Cualquier personalización adicional
+
+¿Podemos coordinar los detalles y la estructura del proyecto?
+
+¡Listo para empezar! 🎯`;
+
+            // Cerrar modal primero
             closePaymentModal();
-            showConfirmationMessage(methodName, paymentInfo, customerWhatsappUrl, notificationWhatsappUrl);
+            
+            // Crear URL de WhatsApp con formato correcto
+            const phoneNumber = '584147825840';
+            const encodedMessage = encodeURIComponent(customerMessage);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            console.log('Abriendo WhatsApp:', whatsappUrl);
+            
+            // Intentar múltiples métodos para abrir WhatsApp
+            try {
+                // Método 1: window.open
+                const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+                
+                // Método 2: Si window.open falla, usar location.href
+                if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                    window.location.href = whatsappUrl;
+                }
+                
+                // Mostrar mensaje de confirmación después de un pequeño delay
+                setTimeout(() => {
+                    showSuccessMessage(methodName, paymentInfo, planName, deliveryTime);
+                }, 500);
+                
+            } catch (error) {
+                console.error('Error abriendo WhatsApp:', error);
+                // Fallback: mostrar la URL para copiar manualmente
+                showWhatsAppError(whatsappUrl, methodName, paymentInfo, planName, deliveryTime);
+            }
         }
 
-        function showConfirmationMessage(methodName, paymentInfo, customerUrl, notificationUrl) {
+        function showSuccessMessage(methodName, paymentInfo, planName, deliveryTime) {
+            const successHTML = `
+                <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-check text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">¡Mensaje Enviado! 🚀</h3>
+                            <p class="text-gray-600 mb-6">Tu solicitud fue enviada a Daniel con todos los detalles:</p>
+                            
+                            <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-2xl mb-6">
+                                <div class="text-sm text-gray-700 text-left">
+                                    <p class="font-semibold mb-2">📋 Información enviada:</p>
+                                    <div class="space-y-1">
+                                        <p>• Servicio: ${planName}</p>
+                                        <p>• Método de pago: ${methodName}</p>
+                                        <p>• Datos: ${paymentInfo}</p>
+                                        <p>• Entrega: ${deliveryTime}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 border border-green-200 rounded-2xl p-4 mb-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-green-600 mt-1 mr-3"></i>
+                                    <div class="text-sm text-green-700 text-left">
+                                        <p class="font-semibold mb-1">⚡ Próximos pasos:</p>
+                                        <p>1. Daniel revisará tu solicitud</p>
+                                        <p>2. Te contactará para coordinar detalles</p>
+                                        <p>3. Definirán la estructura del proyecto</p>
+                                        <p>4. Te enviará el enlace de pago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="closeSuccessModal()" 
+                                    class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all">
+                                ¡Perfecto, Gracias!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', successHTML);
+            
+            // Copiar automáticamente los datos de pago
+            navigator.clipboard.writeText(paymentInfo).catch(() => {
+                console.log('No se pudo copiar automáticamente');
+            });
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            if (modal) modal.remove();
+        }
+
+        function showConfirmationMessage(methodName, paymentInfo, customerUrl, notificationUrl, planName, deliveryTime) {
             const confirmationHTML = `
                 <div id="confirmation-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                    <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl">
+                    <div class="bg-white rounded-3xl p-8 max-w-lg w-full mx-4 shadow-2xl">
                         <div class="text-center mb-6">
                             <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fas fa-check text-white text-2xl"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">¡Perfecto!</h3>
-                            <p class="text-gray-600 mb-4">Método de pago seleccionado:</p>
-                            <div class="bg-gray-50 p-4 rounded-2xl mb-4">
-                                <div class="font-semibold text-gray-800">${methodName}</div>
-                                <div class="text-sm text-gray-600">${paymentInfo}</div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">¡Solicitud Lista! 🚀</h3>
+                            <p class="text-gray-600 mb-4">Tu mensaje detallado está preparado</p>
+                            
+                            <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-2xl mb-4 text-left">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-clipboard-list text-purple-600 mr-2"></i>
+                                    <span class="font-semibold text-gray-800">Resumen de tu solicitud:</span>
+                                </div>
+                                <div class="text-sm text-gray-700 space-y-1">
+                                    <div>📋 <strong>Plan:</strong> ${planName}</div>
+                                    <div>💳 <strong>Pago:</strong> ${methodName}</div>
+                                    <div>⏱️ <strong>Entrega:</strong> ${deliveryTime}</div>
+                                    <div>📧 <strong>Datos:</strong> ${paymentInfo}</div>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="space-y-3">
                             <button onclick="window.open('${customerUrl}', '_blank', 'noopener,noreferrer'); closeConfirmationModal();" 
-                                    class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all">
-                                <i class="fab fa-whatsapp mr-2"></i>
-                                Contactar por WhatsApp
+                                    class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all pulse-animation">
+                                <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                                Enviar Solicitud por WhatsApp
                             </button>
                             
-                            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4 mt-4">
+                            <div class="bg-green-50 border border-green-200 rounded-2xl p-4">
                                 <div class="flex items-start">
-                                    <i class="fas fa-info-circle text-blue-500 mt-1 mr-3"></i>
+                                    <i class="fas fa-magic text-green-600 mt-1 mr-3"></i>
+                                    <div class="text-sm text-green-700">
+                                        <p class="font-semibold mb-2">✨ Tu mensaje incluye:</p>
+                                        <div class="grid grid-cols-2 gap-2 text-xs">
+                                            <div>• Detalles completos del plan</div>
+                                            <div>• Método de pago preferido</div>
+                                            <div>• Tiempo de entrega</div>
+                                            <div>• Lista de características</div>
+                                            <div>• Solicitud de enlace de pago</div>
+                                            <div>• Coordinación de proyecto</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-blue-600 mt-1 mr-3"></i>
                                     <div class="text-sm text-blue-700">
-                                        <p class="font-semibold mb-1">Proceso de pago:</p>
-                                        <p>1. Contacta por WhatsApp para coordinar</p>
-                                        <p>2. Daniel te enviará el enlace de pago directo</p>
-                                        <p>3. Realiza el pago de forma segura</p>
-                                        <p>4. ¡Comenzamos tu proyecto!</p>
+                                        <p class="font-semibold mb-1">⚡ Proceso rápido:</p>
+                                        <p>1. 📱 Envías el mensaje detallado</p>
+                                        <p>2. 🔔 Daniel recibe notificación automática</p>
+                                        <p>3. 💳 Te envía enlace de pago directo</p>
+                                        <p>4. 🚀 ¡Proyecto iniciado!</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <button onclick="copyPaymentInfo('${paymentInfo}')" 
-                                    class="w-full glass-card text-purple-700 hover:bg-purple-50 py-4 rounded-2xl font-medium transition-all">
+                                    class="w-full glass-card text-purple-700 hover:bg-purple-50 py-3 rounded-2xl font-medium transition-all">
                                 <i class="fas fa-copy mr-2"></i>
-                                Copiar datos de pago
+                                Copiar datos de ${methodName}
                             </button>
                             
                             <button onclick="closeConfirmationModal()" 
@@ -1400,16 +1566,34 @@
                 setTimeout(() => {
                     const statusDiv = document.createElement('div');
                     statusDiv.innerHTML = `
-                        <div class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
-                            <i class="fas fa-check mr-2"></i>
-                            Notificación enviada a Daniel
+                        <div class="fixed top-4 right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-xl shadow-2xl z-50">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
+                                <div>
+                                    <div class="font-bold">🔔 Notificación Automática Enviada</div>
+                                    <div class="text-sm opacity-90">Daniel ya sabe que tienes interés</div>
+                                </div>
+                            </div>
                         </div>
                     `;
                     document.body.appendChild(statusDiv);
                     
+                    // Add slide-in animation
+                    const notification = statusDiv.querySelector('div');
+                    notification.style.transform = 'translateX(100%)';
+                    notification.style.transition = 'transform 0.5s ease-out';
+                    
                     setTimeout(() => {
-                        statusDiv.remove();
-                    }, 3000);
+                        notification.style.transform = 'translateX(0)';
+                    }, 100);
+                    
+                    // Remove notification after 6 seconds
+                    setTimeout(() => {
+                        notification.style.transform = 'translateX(100%)';
+                        setTimeout(() => {
+                            statusDiv.remove();
+                        }, 500);
+                    }, 6000);
                 }, 500);
             }, 1000);
         }
@@ -1437,7 +1621,66 @@
             const modal = document.getElementById('confirmation-modal');
             if (modal) modal.remove();
         }
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'996b05d88122492b',t:'MTc2MTgyODQ2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
 
+        function showWhatsAppError(whatsappUrl, methodName, paymentInfo, planName, deliveryTime) {
+            const errorHTML = `
+                <div id="error-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fab fa-whatsapp text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">¡Abre WhatsApp Manualmente! 📱</h3>
+                            <p class="text-gray-600 mb-6">Copia este enlace y ábrelo en tu navegador:</p>
+                            
+                            <div class="bg-gray-50 p-4 rounded-2xl mb-6 break-all text-sm text-gray-700 max-h-32 overflow-y-auto">
+                                ${whatsappUrl}
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <button onclick="copyWhatsAppUrl('${whatsappUrl}')" 
+                                        class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all">
+                                    <i class="fas fa-copy mr-2"></i>
+                                    Copiar Enlace de WhatsApp
+                                </button>
+                                
+                                <button onclick="window.location.href='${whatsappUrl}'" 
+                                        class="w-full glass-card text-green-700 hover:bg-green-50 py-3 rounded-2xl font-medium transition-all">
+                                    <i class="fab fa-whatsapp mr-2"></i>
+                                    Intentar Abrir Nuevamente
+                                </button>
+                                
+                                <button onclick="closeErrorModal()" 
+                                        class="w-full py-3 text-gray-600 hover:text-gray-800 font-medium transition-colors">
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', errorHTML);
+        }
+
+        function copyWhatsAppUrl(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                const button = event.target.closest('button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>¡Enlace Copiado!';
+                button.classList.add('bg-green-500');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-500');
+                }, 2000);
+            });
+        }
+
+        function closeErrorModal() {
+            const modal = document.getElementById('error-modal');
+            if (modal) modal.remove();
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'996b26530454492b',t:'MTc2MTgyOTc5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
