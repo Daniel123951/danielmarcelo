@@ -1,66 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Marcelo - Desarrollador Front-end & Ingeniero de Sistemas</title>
-    
-    <!-- Open Graph para WhatsApp, Telegram y redes sociales -->
-    <meta property="og:title" content="Daniel Marcelo - Desarrollador Front-end & UX/UI" />
-    <meta property="og:description" content="Portafolio profesional de Daniel Marcelo, ingeniero de sistemas especializado en desarrollo web y diseño UX/UI." />
-    <meta property="og:image" content="https://i.imgur.com/LqJIwVE.png" />
-    <meta property="og:url" content="https://daniel123951.github.io/danielmarcelo/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Daniel Marcelo Portfolio" />
-    
-    <!-- Twitter Card (también usada por Telegram) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Daniel Marcelo - Desarrollador Front-end & UX/UI" />
-    <meta name="twitter:description" content="Portafolio profesional de Daniel Marcelo, ingeniero de sistemas especializado en desarrollo web y diseño UX/UI." />
-    <meta name="twitter:image" content="https://i.imgur.com/LqJIwVE.png" />
-    
-    <!-- Metadatos adicionales -->
-    <meta name="description" content="Portafolio profesional de Daniel Marcelo, ingeniero de sistemas especializado en desarrollo web, UX/UI y soluciones tecnológicas integrales." />
-    <meta name="keywords" content="Daniel Marcelo, desarrollador front-end, UX/UI, ingeniero sistemas, WordPress, JavaScript, HTML, CSS" />
-    <meta name="author" content="Daniel Marcelo" />
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Marcelo - Desarrollador Front-end &amp; Ingeniero de Sistemas</title><!-- Open Graph para WhatsApp, Telegram y redes sociales -->
+  <meta property="og:title" content="Daniel Marcelo - Desarrollador Front-end &amp; UX/UI">
+  <meta property="og:description" content="Portafolio profesional de Daniel Marcelo, ingeniero de sistemas especializado en desarrollo web y diseño UX/UI.">
+  <meta property="og:image" content="https://i.imgur.com/LqJIwVE.png">
+  <meta property="og:url" content="https://daniel123951.github.io/danielmarcelo/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Daniel Marcelo Portfolio"><!-- Twitter Card (también usada por Telegram) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daniel Marcelo - Desarrollador Front-end &amp; UX/UI">
+  <meta name="twitter:description" content="Portafolio profesional de Daniel Marcelo, ingeniero de sistemas especializado en desarrollo web y diseño UX/UI.">
+  <meta name="twitter:image" content="https://i.imgur.com/LqJIwVE.png"><!-- Metadatos adicionales -->
+  <meta name="description" content="Portafolio profesional de Daniel Marcelo, ingeniero de sistemas especializado en desarrollo web, UX/UI y soluciones tecnológicas integrales.">
+  <meta name="keywords" content="Daniel Marcelo, desarrollador front-end, UX/UI, ingeniero sistemas, WordPress, JavaScript, HTML, CSS">
+  <meta name="author" content="Daniel Marcelo">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         * {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            box-sizing: border-box;
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+        }
+        
+        .gradient-hero {
+            background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 25%, #e0e7ff 50%, #dbeafe 75%, #ecfdf5 100%);
         }
         
         .gradient-accent {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
         }
         
         .card-hover {
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
         
         .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .skill-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .skill-icon:hover {
-            transform: scale(1.15);
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.15);
         }
         
         .nav-link {
             position: relative;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .nav-link::after {
@@ -70,7 +63,7 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(90deg, #a78bfa, #8b5cf6);
             transition: width 0.3s ease;
         }
         
@@ -78,25 +71,66 @@
             width: 100%;
         }
         
-        .project-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
+        .phone-mockup {
+            width: 280px;
+            height: 560px;
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border-radius: 40px;
+            padding: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 8px solid #e2e8f0;
         }
         
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        
+        .slide-web { background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%); }
+        .slide-app { background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%); }
+        .slide-marketing { background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); }
+        .slide-design { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); }
+        .slide-ecommerce { background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%); }
+        
         .typing-animation {
-            border-right: 2px solid #3b82f6;
+            border-right: 2px solid #8b5cf6;
             animation: blink 1s infinite;
         }
         
         @keyframes blink {
-            0%, 50% { border-color: #3b82f6; }
+            0%, 50% { border-color: #8b5cf6; }
             51%, 100% { border-color: transparent; }
         }
         
         .section-fade {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: all 0.8s ease;
         }
         
         .section-fade.visible {
@@ -104,906 +138,826 @@
             transform: translateY(0);
         }
         
-        .photo-placeholder {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            border: 3px dashed #cbd5e1;
-            transition: all 0.3s ease;
-        }
-        
-        .photo-placeholder:hover {
-            border-color: #3b82f6;
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-        }
-        
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.1);
+        .skill-card {
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .payment-toggle {
+            color: #6b7280;
+            background: transparent;
+        }
+        
+        .payment-toggle.active {
+            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+            color: white;
+        }
+        
+        .pricing-card {
             transition: all 0.3s ease;
         }
         
-        .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.05);
+        .pricing-card:hover {
+            transform: translateY(-8px);
         }
-        
-        .skill-card-frontend { background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); }
-        .skill-card-backend { background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); }
-        .skill-card-cms { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
-        .skill-card-ux { background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); }
-        .skill-card-design { background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); }
-        .skill-card-tools { background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); }
     </style>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                    Daniel Marcelo
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#inicio" class="nav-link text-gray-700 hover:text-blue-600" data-es="Inicio" data-en="Home">Inicio</a>
-                    <a href="#sobre-mi" class="nav-link text-gray-700 hover:text-blue-600" data-es="Sobre Mí" data-en="About">Sobre Mí</a>
-                    <a href="#experiencia" class="nav-link text-gray-700 hover:text-blue-600" data-es="Experiencia" data-en="Experience">Experiencia</a>
-                    <a href="#habilidades" class="nav-link text-gray-700 hover:text-blue-600" data-es="Habilidades" data-en="Skills">Habilidades</a>
-                    <a href="#portafolio" class="nav-link text-gray-700 hover:text-blue-600" data-es="Portafolio" data-en="Portfolio">Portafolio</a>
-                    <a href="#contacto" class="nav-link text-gray-700 hover:text-blue-600" data-es="Contacto" data-en="Contact">Contacto</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button id="lang-toggle" class="lang-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600">
-                        <i class="fas fa-globe mr-1"></i>
-                        <span id="lang-text">EN</span>
-                    </button>
-                    <button id="mobile-menu-btn" class="md:hidden text-gray-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-2 space-y-2">
-                <a href="#inicio" class="block py-2 text-gray-600 hover:text-blue-600" data-es="Inicio" data-en="Home">Inicio</a>
-                <a href="#sobre-mi" class="block py-2 text-gray-600 hover:text-blue-600" data-es="Sobre Mí" data-en="About">Sobre Mí</a>
-                <a href="#experiencia" class="block py-2 text-gray-600 hover:text-blue-600" data-es="Experiencia" data-en="Experience">Experiencia</a>
-                <a href="#habilidades" class="block py-2 text-gray-600 hover:text-blue-600" data-es="Habilidades" data-en="Skills">Habilidades</a>
-                <a href="#portafolio" class="block py-2 text-gray-600 hover:text-blue-600" data-es="Portafolio" data-en="Portfolio">Portafolio</a>
-                <a href="#contacto" class="block py-2 text-gray-600 hover:text-blue-600" data-es="Contacto" data-en="Contact">Contacto</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="gradient-bg min-h-screen flex items-center justify-center text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="mb-8">
-                <!-- Photo -->
-                <div class="w-40 h-40 mx-auto mb-6">
-                    <!-- Intentamos múltiples formatos de Imgur -->
-                    <img src="https://i.imgur.com/LqJIwVE.png" alt="Daniel Marcelo" class="w-40 h-40 rounded-full object-cover shadow-xl border-4 border-white/20" onerror="
-                        this.src='https://i.imgur.com/LqJIwVE.jpg'; 
-                        this.onerror=function(){
-                            this.src='https://imgur.com/LqJIwVE.png';
-                            this.onerror=function(){
-                                this.src='https://imgur.com/LqJIwVE.jpg';
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="bg-gradient-to-br from-purple-50 via-blue-50 to-green-50"><!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-lg z-50 border-b border-purple-100">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+     <div class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+      Daniel Marcelo
+     </div>
+     <div class="hidden md:flex space-x-8"><a href="#inicio" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Inicio" data-en="Home">Inicio</a> <a href="#sobre-mi" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Sobre Mí" data-en="About">Sobre Mí</a> <a href="#servicios" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Servicios" data-en="Services">Servicios</a> <a href="#experiencia" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Experiencia" data-en="Experience">Experiencia</a> <a href="#habilidades" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Habilidades" data-en="Skills">Habilidades</a> <a href="#portafolio" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Portafolio" data-en="Portfolio">Portafolio</a> <a href="#precios" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Precios" data-en="Pricing">Precios</a> <a href="#contacto" class="nav-link text-gray-700 hover:text-purple-600 font-medium" data-es="Contacto" data-en="Contact">Contacto</a>
+     </div>
+     <div class="flex items-center space-x-4"><button id="lang-toggle" class="glass-card px-4 py-2 rounded-full text-sm font-medium text-purple-700 hover:bg-white/40 transition-all"> <i class="fas fa-globe mr-2"></i> <span id="lang-text">EN</span> </button> <button id="mobile-menu-btn" class="md:hidden text-purple-600"> <i class="fas fa-bars text-xl"></i> </button>
+     </div>
+    </div>
+   </div><!-- Mobile Menu -->
+   <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-purple-100">
+    <div class="px-4 py-4 space-y-3"><a href="#inicio" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Inicio" data-en="Home">Inicio</a> <a href="#sobre-mi" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Sobre Mí" data-en="About">Sobre Mí</a> <a href="#servicios" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Servicios" data-en="Services">Servicios</a> <a href="#experiencia" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Experiencia" data-en="Experience">Experiencia</a> <a href="#habilidades" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Habilidades" data-en="Skills">Habilidades</a> <a href="#portafolio" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Portafolio" data-en="Portfolio">Portafolio</a> <a href="#precios" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Precios" data-en="Pricing">Precios</a> <a href="#contacto" class="block py-2 text-gray-600 hover:text-purple-600 font-medium" data-es="Contacto" data-en="Contact">Contacto</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section id="inicio" class="gradient-hero min-h-screen flex items-center justify-center pt-20">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center"><!-- Left Content -->
+     <div class="text-center lg:text-left">
+      <div class="mb-8"><!-- Photo -->
+       <div class="w-32 h-32 mx-auto lg:mx-0 mb-6"><img src="https://i.imgur.com/LqJIwVE.png" alt="Daniel Marcelo" class="w-32 h-32 rounded-full object-cover shadow-xl border-4 border-white/50 floating-animation" onerror="
+                                this.src='https://i.imgur.com/LqJIwVE.jpg'; 
                                 this.onerror=function(){
                                     this.style.display='none'; 
                                     this.nextElementSibling.style.display='flex';
-                                    this.nextElementSibling.nextElementSibling.style.display='block';
                                 }
-                            }
-                        }
-                    ">
-                    <!-- Fallback con ícono profesional -->
-                    <div class="w-40 h-40 rounded-full bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-xl border-4 border-white/20" style="display:none;">
-                        <i class="fas fa-user text-4xl text-white"></i>
-                    </div>
-                    <!-- Mensaje de ayuda -->
-                    <div class="text-center mt-4 text-blue-200 text-sm" style="display:none;">
-                        <p data-es="📸 Imagen no disponible" data-en="📸 Image not available">📸 Imagen no disponible</p>
-                        <button onclick="showImageHelp()" class="text-blue-300 hover:text-white underline text-xs mt-1" 
-                                data-es="¿Cómo agregar mi foto?" data-en="How to add my photo?">
-                            ¿Cómo agregar mi foto?
-                        </button>
-                    </div>
-                </div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Daniel Marcelo</h1>
-                <div class="text-xl md:text-2xl text-blue-200 mb-6">
-                    <span id="typing-text" class="typing-animation">Desarrollador Front-end</span>
-                </div>
-                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8" 
-                   data-es="Ingeniero en Sistemas especializado en desarrollo web, UX/UI y soluciones tecnológicas integrales"
-                   data-en="Systems Engineer specialized in web development, UX/UI and comprehensive technological solutions">
-                    Ingeniero en Sistemas especializado en desarrollo web, UX/UI y soluciones tecnológicas integrales
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#portafolio" class="gradient-accent text-white px-8 py-3 rounded-lg font-medium transition-all hover:shadow-lg hover:scale-105"
-                       data-es="Ver Portafolio" data-en="View Portfolio">
-                        Ver Portafolio
-                    </a>
-                    <a href="#contacto" class="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-lg font-medium transition-colors"
-                       data-es="Contactar" data-en="Contact">
-                        Contactar
-                    </a>
-                </div>
-            </div>
+                            "> <!-- Fallback -->
+        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-green-400 flex items-center justify-center shadow-xl border-4 border-white/50 floating-animation" style="display:none;"><i class="fas fa-user text-3xl text-white"></i>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="sobre-mi" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="section-fade">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12" 
-                    data-es="Sobre Mí" data-en="About Me">Sobre Mí</h2>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 rounded-2xl flex items-center justify-center shadow-xl">
-                            <i class="fas fa-code text-6xl text-blue-600"></i>
-                        </div>
-                    </div>
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-semibold text-gray-800" 
-                            data-es="Desarrollador Front-end & Ingeniero en Sistemas" 
-                            data-en="Front-end Developer & Systems Engineer">
-                            Desarrollador Front-end & Ingeniero en Sistemas
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed" 
-                           data-es="Soy un desarrollador front-end con experiencia sólida en HTML, CSS, JavaScript y Bootstrap. Me especializo en crear sitios web dinámicos y adaptables usando WordPress y otros CMS."
-                           data-en="I am a front-end developer with solid experience in HTML, CSS, JavaScript and Bootstrap. I specialize in creating dynamic and responsive websites using WordPress and other CMS.">
-                            Soy un desarrollador front-end con experiencia sólida en HTML, CSS, JavaScript y Bootstrap. Me especializo en crear sitios web dinámicos y adaptables usando WordPress y otros CMS.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed" 
-                           data-es="También tengo conocimientos en programación back-end con C, C++, Python y herramientas como Make, lo que me permite abordar proyectos técnicos complejos desde una perspectiva integral."
-                           data-en="I also have knowledge in back-end programming with C, C++, Python and tools like Make, which allows me to approach complex technical projects from a comprehensive perspective.">
-                            También tengo conocimientos en programación back-end con C, C++, Python y herramientas como Make, lo que me permite abordar proyectos técnicos complejos desde una perspectiva integral.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed" 
-                           data-es="Manejo herramientas de diseño gráfico, WordPress (Elementor y Divi), UI y CMS. Con formación en UX/UI, aplico metodologías centradas en el usuario para crear experiencias digitales funcionales, visuales y accesibles."
-                           data-en="I handle graphic design tools, WordPress (Elementor and Divi), UI and CMS. With UX/UI training, I apply user-centered methodologies to create functional, visual and accessible digital experiences.">
-                            Manejo herramientas de diseño gráfico, WordPress (Elementor y Divi), UI y CMS. Con formación en UX/UI, aplico metodologías centradas en el usuario para crear experiencias digitales funcionales, visuales y accesibles.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium" 
-                                  data-es="Ingeniero en Sistemas" data-en="Systems Engineer">Ingeniero en Sistemas</span>
-                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium" 
-                                  data-es="UX/UI Designer" data-en="UX/UI Designer">UX/UI Designer</span>
-                            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium" 
-                                  data-es="Full Stack" data-en="Full Stack">Full Stack</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       </div>
+       <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 bg-clip-text text-transparent">Daniel Marcelo</h1>
+       <div class="text-xl md:text-2xl text-purple-600 mb-6 font-medium"><span id="typing-text" class="typing-animation">Desarrollador Front-end</span>
+       </div>
+       <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed" data-es="Ingeniero de Sistemas especializado en desarrollo web, UX/UI y soluciones tecnológicas que transforman ideas en experiencias digitales extraordinarias" data-en="Systems Engineer specialized in web development, UX/UI and technological solutions that transform ideas into extraordinary digital experiences">Ingeniero de Sistemas especializado en desarrollo web, UX/UI y soluciones tecnológicas que transforman ideas en experiencias digitales extraordinarias</p>
+       <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"><a href="#servicios" class="gradient-accent text-white px-8 py-4 rounded-full font-medium transition-all hover:shadow-lg hover:scale-105 pulse-animation" data-es="Ver Servicios" data-en="View Services"> <i class="fas fa-rocket mr-2"></i>Ver Servicios </a> <a href="#contacto" class="glass-card text-purple-700 hover:text-white hover:bg-purple-500 px-8 py-4 rounded-full font-medium transition-all" data-es="Contactar Ahora" data-en="Contact Now"> <i class="fas fa-paper-plane mr-2"></i>Contactar Ahora </a>
+       </div>
+      </div>
+     </div><!-- Right Content - Phone Mockup -->
+     <div class="flex justify-center lg:justify-end">
+      <div class="phone-mockup floating-animation">
+       <div class="phone-screen"><!-- Slide 1: Sitio Web -->
+        <div class="carousel-slide slide-web active"><i class="fas fa-globe text-6xl text-purple-700 mb-4"></i>
+         <h3 class="text-2xl font-bold text-purple-800 mb-3" data-es="¿Necesitas un sitio web?" data-en="Need a website?">¿Necesitas un sitio web?</h3>
+         <p class="text-purple-600 text-sm leading-relaxed" data-es="Creamos sitios web modernos, rápidos y optimizados que convierten visitantes en clientes" data-en="We create modern, fast and optimized websites that convert visitors into customers">Creamos sitios web modernos, rápidos y optimizados que convierten visitantes en clientes</p>
+        </div><!-- Slide 2: App Móvil -->
+        <div class="carousel-slide slide-app"><i class="fas fa-mobile-alt text-6xl text-blue-700 mb-4"></i>
+         <h3 class="text-2xl font-bold text-blue-800 mb-3" data-es="¿La app de tus sueños?" data-en="Your dream app?">¿La app de tus sueños?</h3>
+         <p class="text-blue-600 text-sm leading-relaxed" data-es="Desarrollamos aplicaciones web progresivas que funcionan como apps nativas en cualquier dispositivo" data-en="We develop progressive web applications that work like native apps on any device">Desarrollamos aplicaciones web progresivas que funcionan como apps nativas en cualquier dispositivo</p>
+        </div><!-- Slide 3: Marketing Digital -->
+        <div class="carousel-slide slide-marketing"><i class="fas fa-chart-line text-6xl text-red-700 mb-4"></i>
+         <h3 class="text-2xl font-bold text-red-800 mb-3" data-es="¿Más seguidores?" data-en="More followers?">¿Más seguidores?</h3>
+         <p class="text-red-600 text-sm leading-relaxed" data-es="Estrategias de marketing digital y contenido que hacen crecer tu audiencia y engagement" data-en="Digital marketing and content strategies that grow your audience and engagement">Estrategias de marketing digital y contenido que hacen crecer tu audiencia y engagement</p>
+        </div><!-- Slide 4: Diseño Gráfico -->
+        <div class="carousel-slide slide-design"><i class="fas fa-palette text-6xl text-orange-700 mb-4"></i>
+         <h3 class="text-2xl font-bold text-orange-800 mb-3" data-es="¿Diseño profesional?" data-en="Professional design?">¿Diseño profesional?</h3>
+         <p class="text-orange-600 text-sm leading-relaxed" data-es="Identidad visual completa, logos, branding y materiales gráficos que destacan tu marca" data-en="Complete visual identity, logos, branding and graphic materials that highlight your brand">Identidad visual completa, logos, branding y materiales gráficos que destacan tu marca</p>
+        </div><!-- Slide 5: E-commerce -->
+        <div class="carousel-slide slide-ecommerce"><i class="fas fa-shopping-cart text-6xl text-green-700 mb-4"></i>
+         <h3 class="text-2xl font-bold text-green-800 mb-3" data-es="¿Vender online?" data-en="Sell online?">¿Vender online?</h3>
+         <p class="text-green-600 text-sm leading-relaxed" data-es="Tiendas online completas con pasarelas de pago, inventario y gestión automatizada" data-en="Complete online stores with payment gateways, inventory and automated management">Tiendas online completas con pasarelas de pago, inventario y gestión automatizada</p>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experiencia" class="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="section-fade">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12" 
-                    data-es="Experiencia Actual" data-en="Current Experience">Experiencia Actual</h2>
-                
-                <div class="max-w-4xl mx-auto">
-                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-indigo-100">
-                        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                                    <i class="fas fa-cube text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-2xl font-bold">Telos Blockchain</h3>
-                                    <p class="text-indigo-200" data-es="Contribuidor de Comunidad" data-en="Community Contributor">
-                                        Contribuidor de Comunidad
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="text-lg text-indigo-100" 
-                               data-es="Blockchain de alto rendimiento para aplicaciones descentralizadas y gobernanza digital"
-                               data-en="High-performance blockchain for decentralized applications and digital governance">
-                                Blockchain de alto rendimiento para aplicaciones descentralizadas y gobernanza digital
-                            </p>
-                        </div>
-                        
-                        <div class="p-8">
-                            <div class="mb-8">
-                                <p class="text-gray-600 leading-relaxed mb-6" 
-                                   data-es="Telos es una blockchain de alto rendimiento diseñada para aplicaciones descentralizadas, gobernanza digital y contratos inteligentes. Su arquitectura basada en EOSIO permite transacciones rápidas, sin tarifas, y una estructura de gobernanza avanzada."
-                                   data-en="Telos is a high-performance blockchain designed for decentralized applications, digital governance and smart contracts. Its EOSIO-based architecture enables fast, fee-free transactions and an advanced governance structure.">
-                                    Telos es una blockchain de alto rendimiento diseñada para aplicaciones descentralizadas, gobernanza digital y contratos inteligentes. Su arquitectura basada en EOSIO permite transacciones rápidas, sin tarifas, y una estructura de gobernanza avanzada.
-                                </p>
-                                <p class="text-gray-600 leading-relaxed" 
-                                   data-es="Como miembro activo de la comunidad Telos, contribuyo en varias áreas clave:"
-                                   data-en="As an active member of the Telos community, I contribute in several key areas:">
-                                    Como miembro activo de la comunidad Telos, contribuyo en varias áreas clave:
-                                </p>
-                            </div>
-                            
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
-                                    <div class="flex items-center mb-4">
-                                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center mr-3">
-                                            <i class="fas fa-search text-white"></i>
-                                        </div>
-                                        <h4 class="text-lg font-semibold text-gray-800" 
-                                            data-es="Auditoría Técnica" data-en="Technical Auditing">Auditoría Técnica</h4>
-                                    </div>
-                                    <p class="text-gray-600 text-sm" 
-                                       data-es="Monitoreo endpoints, verifico cumplimiento de estándares operativos y reporto incidencias que afectan la salud de la red."
-                                       data-en="Monitor endpoints, verify compliance with operational standards and report incidents that affect network health.">
-                                        Monitoreo endpoints, verifico cumplimiento de estándares operativos y reporto incidencias que afectan la salud de la red.
-                                    </p>
-                                </div>
-                                
-                                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100">
-                                    <div class="flex items-center mb-4">
-                                        <div class="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center mr-3">
-                                            <i class="fas fa-comments text-white"></i>
-                                        </div>
-                                        <h4 class="text-lg font-semibold text-gray-800" 
-                                            data-es="Comunicación Estratégica" data-en="Strategic Communication">Comunicación Estratégica</h4>
-                                    </div>
-                                    <p class="text-gray-600 text-sm" 
-                                       data-es="Redacto mensajes bilingües para motivar la participación de BPs en propuestas de gobernanza, votaciones y acciones comunitarias."
-                                       data-en="Write bilingual messages to motivate BP participation in governance proposals, voting and community actions.">
-                                        Redacto mensajes bilingües para motivar la participación de BPs en propuestas de gobernanza, votaciones y acciones comunitarias.
-                                    </p>
-                                </div>
-                                
-                                <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-2xl border border-purple-100">
-                                    <div class="flex items-center mb-4">
-                                        <div class="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center mr-3">
-                                            <i class="fas fa-graduation-cap text-white"></i>
-                                        </div>
-                                        <h4 class="text-lg font-semibold text-gray-800" 
-                                            data-es="Educación Técnica" data-en="Technical Education">Educación Técnica</h4>
-                                    </div>
-                                    <p class="text-gray-600 text-sm" 
-                                       data-es="Diseño guías, simuladores y contenidos que explican cómo funciona Telos, cómo participar en la red y cómo mantener nodos en cumplimiento."
-                                       data-en="Design guides, simulators and content that explain how Telos works, how to participate in the network and how to maintain compliant nodes.">
-                                        Diseño guías, simuladores y contenidos que explican cómo funciona Telos, cómo participar en la red y cómo mantener nodos en cumplimiento.
-                                    </p>
-                                </div>
-                                
-                                <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl border border-orange-100">
-                                    <div class="flex items-center mb-4">
-                                        <div class="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center mr-3">
-                                            <i class="fas fa-users text-white"></i>
-                                        </div>
-                                        <h4 class="text-lg font-semibold text-gray-800" 
-                                            data-es="Participación Comunitaria" data-en="Community Participation">Participación Comunitaria</h4>
-                                    </div>
-                                    <p class="text-gray-600 text-sm" 
-                                       data-es="Represento la visión de Telos en espacios técnicos y comunitarios, compartiendo experiencias sobre gobernanza descentralizada y empoderamiento colectivo."
-                                       data-en="Represent Telos vision in technical and community spaces, sharing experiences on decentralized governance and collective empowerment.">
-                                        Represento la visión de Telos en espacios técnicos y comunitarios, compartiendo experiencias sobre gobernanza descentralizada y empoderamiento colectivo.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-8 flex flex-wrap gap-3 justify-center">
-                                <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">Blockchain</span>
-                                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">EOSIO</span>
-                                <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium" 
-                                      data-es="Gobernanza" data-en="Governance">Gobernanza</span>
-                                <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium" 
-                                      data-es="Auditoría" data-en="Auditing">Auditoría</span>
-                                <span class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium" 
-                                      data-es="Educación" data-en="Education">Educación</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="habilidades" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="section-fade">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12" 
-                    data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Front-end -->
-                    <div class="card-hover skill-card-frontend p-8 rounded-2xl shadow-lg border border-blue-200">
-                        <div class="text-center">
-                            <i class="fas fa-laptop-code skill-icon text-5xl text-blue-600 mb-6"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4" data-es="Front-end" data-en="Front-end">Front-end</h3>
-                            <div class="space-y-3 text-sm text-gray-700">
-                                <div class="flex justify-between items-center">
-                                    <span>HTML/CSS</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>JavaScript</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>Bootstrap</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="Responsive Design" data-en="Responsive Design">Responsive Design</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Back-end -->
-                    <div class="card-hover skill-card-backend p-8 rounded-2xl shadow-lg border border-green-200">
-                        <div class="text-center">
-                            <i class="fas fa-server skill-icon text-5xl text-green-600 mb-6"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4" data-es="Back-end" data-en="Back-end">Back-end</h3>
-                            <div class="space-y-3 text-sm text-gray-700">
-                                <div class="flex justify-between items-center">
-                                    <span>Python</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>C/C++</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>Make</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="Sistemas" data-en="Systems">Sistemas</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CMS & WordPress -->
-                    <div class="card-hover skill-card-cms p-8 rounded-2xl shadow-lg border border-yellow-200">
-                        <div class="text-center">
-                            <i class="fab fa-wordpress skill-icon text-5xl text-yellow-600 mb-6"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4" data-es="CMS & WordPress" data-en="CMS & WordPress">CMS & WordPress</h3>
-                            <div class="space-y-3 text-sm text-gray-700">
-                                <div class="flex justify-between items-center">
-                                    <span>WordPress</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>Elementor</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>Divi</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="CMS Custom" data-en="Custom CMS">CMS Custom</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- UX/UI Design -->
-                    <div class="card-hover skill-card-ux p-8 rounded-2xl shadow-lg border border-purple-200">
-                        <div class="text-center">
-                            <i class="fas fa-paint-brush skill-icon text-5xl text-purple-600 mb-6"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4" data-es="UX/UI Design" data-en="UX/UI Design">UX/UI Design</h3>
-                            <div class="space-y-3 text-sm text-gray-700">
-                                <div class="flex justify-between items-center">
-                                    <span data-es="User Experience" data-en="User Experience">User Experience</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="User Interface" data-en="User Interface">User Interface</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="Prototipado" data-en="Prototyping">Prototipado</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="Accesibilidad" data-en="Accessibility">Accesibilidad</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Diseño Gráfico -->
-                    <div class="card-hover skill-card-design p-8 rounded-2xl shadow-lg border border-pink-200">
-                        <div class="text-center">
-                            <i class="fas fa-palette skill-icon text-5xl text-pink-600 mb-6"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4" data-es="Diseño Gráfico" data-en="Graphic Design">Diseño Gráfico</h3>
-                            <div class="space-y-3 text-sm text-gray-700">
-                                <div class="flex justify-between items-center">
-                                    <span data-es="Diseño Visual" data-en="Visual Design">Diseño Visual</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>Branding</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="Tipografía" data-en="Typography">Tipografía</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span data-es="Teoría del Color" data-en="Color Theory">Teoría del Color</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Herramientas Técnicas -->
-                    <div class="card-hover skill-card-tools p-8 rounded-2xl shadow-lg border border-gray-200">
-                        <div class="text-center">
-                            <i class="fas fa-tools skill-icon text-5xl text-gray-600 mb-6"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4" data-es="Herramientas" data-en="Tools">Herramientas</h3>
-                            <div class="space-y-3 text-sm text-gray-700">
-                                <div class="flex justify-between items-center">
-                                    <span>Git/GitHub</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>VS Code</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>Figma</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span>Terminal/CLI</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portafolio" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="section-fade">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12" 
-                    data-es="Portafolio" data-en="Portfolio">Portafolio</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="project-card card-hover rounded-2xl overflow-hidden shadow-lg">
-                        <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-                            <i class="fas fa-gamepad text-5xl text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2" 
-                                data-es="Juego de Memoria Telos" data-en="Telos Memory Game">Juego de Memoria Telos</h3>
-                            <p class="text-gray-600 text-sm mb-4" 
-                               data-es="Juego interactivo de memoria con temática blockchain desarrollado con HTML, CSS y JavaScript."
-                               data-en="Interactive memory game with blockchain theme developed with HTML, CSS and JavaScript.">
-                                Juego interactivo de memoria con temática blockchain desarrollado con HTML, CSS y JavaScript.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
-                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">HTML/CSS</span>
-                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">Game Dev</span>
-                            </div>
-                            <a href="https://daniel123951.github.io/telos-memory-game/" target="_blank" rel="noopener noreferrer" 
-                               class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors" 
-                               data-es="Ver Proyecto →" data-en="View Project →">Ver Proyecto →</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card card-hover rounded-2xl overflow-hidden shadow-lg">
-                        <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-                            <i class="fas fa-chart-line text-5xl text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2" 
-                                data-es="Panel Ecosistema Telos" data-en="Telos Ecosystem Panel">Panel Ecosistema Telos</h3>
-                            <p class="text-gray-600 text-sm mb-4" 
-                               data-es="Panel interactivo para explorar el ecosistema Telos con visualización de datos en tiempo real."
-                               data-en="Interactive panel to explore the Telos ecosystem with real-time data visualization.">
-                                Panel interactivo para explorar el ecosistema Telos con visualización de datos en tiempo real.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Blockchain</span>
-                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-medium">Data Viz</span>
-                            </div>
-                            <a href="https://daniel123951.github.io/Panel-Interactivo-de-Ecosistema-Telos-/" target="_blank" rel="noopener noreferrer" 
-                               class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors" 
-                               data-es="Ver Proyecto →" data-en="View Project →">Ver Proyecto →</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card card-hover rounded-2xl overflow-hidden shadow-lg">
-                        <div class="h-48 bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center">
-                            <i class="fas fa-rocket text-5xl text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2" 
-                                data-es="Explorador Espacial 3D" data-en="3D Space Explorer">Explorador Espacial 3D</h3>
-                            <p class="text-gray-600 text-sm mb-4" 
-                               data-es="Experiencia interactiva 3D para explorar el espacio con controles intuitivos y gráficos inmersivos."
-                               data-en="Interactive 3D experience to explore space with intuitive controls and immersive graphics.">
-                                Experiencia interactiva 3D para explorar el espacio con controles intuitivos y gráficos inmersivos.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-medium">Three.js</span>
-                                <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-medium">3D Graphics</span>
-                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">WebGL</span>
-                            </div>
-                            <a href="https://daniel123951.github.io/explorador-espacial-3D-interactivo/" target="_blank" rel="noopener noreferrer" 
-                               class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors" 
-                               data-es="Ver Proyecto →" data-en="View Project →">Ver Proyecto →</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card card-hover rounded-2xl overflow-hidden shadow-lg">
-                        <div class="h-48 bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center">
-                            <i class="fas fa-boxes text-5xl text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2" 
-                                data-es="Sistema Inventario Boheme" data-en="Boheme Inventory System">Sistema Inventario Boheme</h3>
-                            <p class="text-gray-600 text-sm mb-4" 
-                               data-es="Sistema completo de gestión de inventario para inversiones con interfaz moderna y funcional."
-                               data-en="Complete inventory management system for investments with modern and functional interface.">
-                                Sistema completo de gestión de inventario para inversiones con interfaz moderna y funcional.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-medium">HTML/CSS</span>
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
-                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs font-medium" 
-                                      data-es="Gestión" data-en="Management">Gestión</span>
-                            </div>
-                            <a href="https://daniel123951.github.io/sistema-de-inventario-para-Inversiones-Boheme/" target="_blank" rel="noopener noreferrer" 
-                               class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors" 
-                               data-es="Ver Proyecto →" data-en="View Project →">Ver Proyecto →</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="project-card card-hover rounded-2xl overflow-hidden shadow-lg">
-                        <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
-                            <i class="fas fa-users text-5xl text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2" 
-                                data-es="Telos Talent DAO" data-en="Telos Talent DAO">Telos Talent DAO</h3>
-                            <p class="text-gray-600 text-sm mb-4" 
-                               data-es="Plataforma descentralizada para conectar talento con oportunidades en el ecosistema Telos."
-                               data-en="Decentralized platform to connect talent with opportunities in the Telos ecosystem.">
-                                Plataforma descentralizada para conectar talento con oportunidades en el ecosistema Telos.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-medium">DAO</span>
-                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Blockchain</span>
-                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">Web3</span>
-                            </div>
-                            <a href="https://daniel123951.github.io/telos-talent-dao/" target="_blank" rel="noopener noreferrer" 
-                               class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors" 
-                               data-es="Ver Proyecto →" data-en="View Project →">Ver Proyecto →</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="project-card card-hover rounded-2xl overflow-hidden shadow-lg">
-                        <div class="h-48 bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center">
-                            <i class="fas fa-warehouse text-5xl text-white"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2" 
-                                data-es="Sistema Gestión Bodega" data-en="Warehouse Management System">Sistema Gestión Bodega</h3>
-                            <p class="text-gray-600 text-sm mb-4" 
-                               data-es="Sistema completo para gestionar inventario de bodega con funcionalidades avanzadas de control."
-                               data-en="Complete system to manage warehouse inventory with advanced control functionalities.">
-                                Sistema completo para gestionar inventario de bodega con funcionalidades avanzadas de control.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
-                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs font-medium" 
-                                      data-es="Inventario" data-en="Inventory">Inventario</span>
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium" 
-                                      data-es="Gestión" data-en="Management">Gestión</span>
-                            </div>
-                            <a href="https://daniel123951.github.io/sistema-completo-para-gestionar-tu-bodega/" target="_blank" rel="noopener noreferrer" 
-                               class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors" 
-                               data-es="Ver Proyecto →" data-en="View Project →">Ver Proyecto →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contacto" class="py-20 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="section-fade">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8" 
-                    data-es="¿Listo para trabajar juntos?" data-en="Ready to work together?">¿Listo para trabajar juntos?</h2>
-                <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto" 
-                   data-es="Estoy disponible para nuevos proyectos y colaboraciones. ¡Conectemos y creemos algo increíble!"
-                   data-en="I'm available for new projects and collaborations. Let's connect and create something amazing!">
-                    Estoy disponible para nuevos proyectos y colaboraciones. ¡Conectemos y creemos algo increíble!
-                </p>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                    <a href="https://www.linkedin.com/in/daniel-marcelo182/" target="_blank" rel="noopener noreferrer" 
-                       class="card-hover bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
-                        <i class="fab fa-linkedin text-4xl text-blue-400 mb-3"></i>
-                        <h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
-                        <p class="text-gray-300 text-sm" data-es="Conecta conmigo profesionalmente" data-en="Connect with me professionally">
-                            Conecta conmigo profesionalmente
-                        </p>
-                    </a>
-                    
-                    <a href="https://github.com/Daniel123951" target="_blank" rel="noopener noreferrer" 
-                       class="card-hover bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
-                        <i class="fab fa-github text-4xl text-gray-300 mb-3"></i>
-                        <h3 class="text-lg font-semibold mb-2">GitHub</h3>
-                        <p class="text-gray-300 text-sm" data-es="Revisa mi código y proyectos" data-en="Check my code and projects">
-                            Revisa mi código y proyectos
-                        </p>
-                    </a>
-                    
-                    <a href="mailto:danielmarcelo123951@gmail.com" 
-                       class="card-hover bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
-                        <i class="fas fa-envelope text-4xl text-red-400 mb-3"></i>
-                        <h3 class="text-lg font-semibold mb-2">Email</h3>
-                        <p class="text-gray-300 text-sm" data-es="Envíame un correo" data-en="Send me an email">
-                            Envíame un correo
-                        </p>
-                    </a>
-                    
-                    <a href="https://api.whatsapp.com/send?phone=584147825840&text=Hola%20Daniel,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte" target="_blank" rel="noopener noreferrer"
-                       class="card-hover bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
-                        <i class="fab fa-whatsapp text-4xl text-green-400 mb-3"></i>
-                        <h3 class="text-lg font-semibold mb-2">WhatsApp</h3>
-                        <p class="text-gray-300 text-sm" data-es="Escríbeme por WhatsApp" data-en="Message me on WhatsApp">
-                            Escríbeme por WhatsApp
-                        </p>
-                    </a>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                    <h3 class="text-2xl font-semibold mb-4" 
-                        data-es="¿Tienes un proyecto en mente?" data-en="Do you have a project in mind?">¿Tienes un proyecto en mente?</h3>
-                    <p class="text-gray-300 mb-6" 
-                       data-es="Me especializo en desarrollo front-end, UX/UI y soluciones web completas. Desde sitios corporativos hasta aplicaciones complejas."
-                       data-en="I specialize in front-end development, UX/UI and complete web solutions. From corporate sites to complex applications.">
-                        Me especializo en desarrollo front-end, UX/UI y soluciones web completas. 
-                        Desde sitios corporativos hasta aplicaciones complejas.
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <span class="bg-blue-600/20 text-blue-200 px-4 py-2 rounded-full" 
-                              data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</span>
-                        <span class="bg-green-600/20 text-green-200 px-4 py-2 rounded-full" 
-                              data-es="UX/UI Design" data-en="UX/UI Design">UX/UI Design</span>
-                        <span class="bg-purple-600/20 text-purple-200 px-4 py-2 rounded-full">WordPress</span>
-                        <span class="bg-orange-600/20 text-orange-200 px-4 py-2 rounded-full" 
-                              data-es="Consultoría" data-en="Consulting">Consultoría</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-gray-400" data-es="&copy; 2024 Daniel Marcelo. Todos los derechos reservados." 
-                       data-en="&copy; 2024 Daniel Marcelo. All rights reserved.">&copy; 2024 Daniel Marcelo. Todos los derechos reservados.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="https://www.linkedin.com/in/daniel-marcelo182/" target="_blank" rel="noopener noreferrer" 
-                       class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="https://github.com/Daniel123951" target="_blank" rel="noopener noreferrer" 
-                       class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Photo Instructions Modal -->
-    <div id="photo-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-2xl p-8 max-w-md mx-4">
-            <h3 class="text-xl font-bold text-gray-800 mb-4" data-es="Cómo agregar tu foto" data-en="How to add your photo">
-                Cómo agregar tu foto
-            </h3>
-            <div class="space-y-4 text-sm text-gray-600">
-                <p data-es="Para agregar tu foto personal:" data-en="To add your personal photo:">
-                    Para agregar tu foto personal:
-                </p>
-                <ol class="list-decimal list-inside space-y-2">
-                    <li data-es="Sube tu foto a un servicio como Imgur, Google Drive (público) o GitHub" 
-                        data-en="Upload your photo to a service like Imgur, Google Drive (public) or GitHub">
-                        Sube tu foto a un servicio como Imgur, Google Drive (público) o GitHub
-                    </li>
-                    <li data-es="Copia la URL directa de la imagen" data-en="Copy the direct URL of the image">
-                        Copia la URL directa de la imagen
-                    </li>
-                    <li data-es="Reemplaza el círculo con foto usando esta estructura:" 
-                        data-en="Replace the circle with photo using this structure:">
-                        Reemplaza el círculo con foto usando esta estructura:
-                    </li>
-                </ol>
-                <div class="bg-gray-100 p-3 rounded text-xs font-mono">
-                    &lt;img src="TU_URL_AQUI" alt="Daniel Marcelo" class="w-40 h-40 rounded-full object-cover shadow-xl"&gt;
-                </div>
-                <p class="text-xs text-gray-500" 
-                   data-es="Nota: La imagen debe ser cuadrada (400x400px recomendado) para mejor resultado"
-                   data-en="Note: Image should be square (400x400px recommended) for best result">
-                    Nota: La imagen debe ser cuadrada (400x400px recomendado) para mejor resultado
-                </p>
-            </div>
-            <button onclick="closePhotoModal()" class="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                    data-es="Entendido" data-en="Got it">
-                Entendido
-            </button>
-        </div>
+       </div>
+      </div>
+     </div>
     </div>
-
-    <script>
+   </div>
+  </section><!-- Services Section -->
+  <section id="servicios" class="py-20 bg-white/50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-fade text-center mb-16">
+     <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent" data-es="Servicios Profesionales" data-en="Professional Services">Servicios Profesionales</h2>
+     <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-es="Transformo tus ideas en soluciones digitales que impulsan tu negocio hacia el éxito" data-en="I transform your ideas into digital solutions that drive your business to success">Transformo tus ideas en soluciones digitales que impulsan tu negocio hacia el éxito</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Desarrollo Web -->
+     <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center"><i class="fas fa-code text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</h3>
+       <p class="text-gray-600 mb-6 leading-relaxed" data-es="Sitios web modernos, responsivos y optimizados para SEO que convierten visitantes en clientes" data-en="Modern, responsive and SEO-optimized websites that convert visitors into customers">Sitios web modernos, responsivos y optimizados para SEO que convierten visitantes en clientes</p>
+       <ul class="text-sm text-gray-500 space-y-2 text-left">
+        <li><i class="fas fa-check text-purple-500 mr-2"></i>HTML5, CSS3, JavaScript</li>
+        <li><i class="fas fa-check text-purple-500 mr-2"></i>WordPress &amp; CMS</li>
+        <li><i class="fas fa-check text-purple-500 mr-2"></i>Responsive Design</li>
+        <li><i class="fas fa-check text-purple-500 mr-2"></i>Optimización SEO</li>
+       </ul>
+      </div>
+     </div><!-- UX/UI Design -->
+     <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center"><i class="fas fa-paint-brush text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="UX/UI Design" data-en="UX/UI Design">UX/UI Design</h3>
+       <p class="text-gray-600 mb-6 leading-relaxed" data-es="Experiencias de usuario intuitivas y interfaces atractivas que mejoran la conversión" data-en="Intuitive user experiences and attractive interfaces that improve conversion">Experiencias de usuario intuitivas y interfaces atractivas que mejoran la conversión</p>
+       <ul class="text-sm text-gray-500 space-y-2 text-left">
+        <li><i class="fas fa-check text-blue-500 mr-2"></i>Investigación de usuarios</li>
+        <li><i class="fas fa-check text-blue-500 mr-2"></i>Prototipado interactivo</li>
+        <li><i class="fas fa-check text-blue-500 mr-2"></i>Design Systems</li>
+        <li><i class="fas fa-check text-blue-500 mr-2"></i>Testing de usabilidad</li>
+       </ul>
+      </div>
+     </div><!-- E-commerce -->
+     <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center"><i class="fas fa-shopping-cart text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="E-commerce" data-en="E-commerce">E-commerce</h3>
+       <p class="text-gray-600 mb-6 leading-relaxed" data-es="Tiendas online completas con gestión de inventario, pagos seguros y analytics" data-en="Complete online stores with inventory management, secure payments and analytics">Tiendas online completas con gestión de inventario, pagos seguros y analytics</p>
+       <ul class="text-sm text-gray-500 space-y-2 text-left">
+        <li><i class="fas fa-check text-green-500 mr-2"></i>WooCommerce &amp; Shopify</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Pasarelas de pago</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Gestión de inventario</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Analytics &amp; reportes</li>
+       </ul>
+      </div>
+     </div><!-- Marketing Digital -->
+     <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center"><i class="fas fa-chart-line text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="Marketing Digital" data-en="Digital Marketing">Marketing Digital</h3>
+       <p class="text-gray-600 mb-6 leading-relaxed" data-es="Estrategias de contenido y campañas que aumentan tu visibilidad y engagement" data-en="Content strategies and campaigns that increase your visibility and engagement">Estrategias de contenido y campañas que aumentan tu visibilidad y engagement</p>
+       <ul class="text-sm text-gray-500 space-y-2 text-left">
+        <li><i class="fas fa-check text-red-500 mr-2"></i>Social Media Management</li>
+        <li><i class="fas fa-check text-red-500 mr-2"></i>Content Marketing</li>
+        <li><i class="fas fa-check text-red-500 mr-2"></i>SEO &amp; SEM</li>
+        <li><i class="fas fa-check text-red-500 mr-2"></i>Email Marketing</li>
+       </ul>
+      </div>
+     </div><!-- Diseño Gráfico -->
+     <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center"><i class="fas fa-palette text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="Diseño Gráfico" data-en="Graphic Design">Diseño Gráfico</h3>
+       <p class="text-gray-600 mb-6 leading-relaxed" data-es="Identidad visual completa que comunica los valores de tu marca de forma efectiva" data-en="Complete visual identity that effectively communicates your brand values">Identidad visual completa que comunica los valores de tu marca de forma efectiva</p>
+       <ul class="text-sm text-gray-500 space-y-2 text-left">
+        <li><i class="fas fa-check text-orange-500 mr-2"></i>Logos &amp; Branding</li>
+        <li><i class="fas fa-check text-orange-500 mr-2"></i>Material publicitario</li>
+        <li><i class="fas fa-check text-orange-500 mr-2"></i>Packaging design</li>
+        <li><i class="fas fa-check text-orange-500 mr-2"></i>Identidad corporativa</li>
+       </ul>
+      </div>
+     </div><!-- Consultoría -->
+     <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-2xl flex items-center justify-center"><i class="fas fa-lightbulb text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="Consultoría Tech" data-en="Tech Consulting">Consultoría Tech</h3>
+       <p class="text-gray-600 mb-6 leading-relaxed" data-es="Asesoramiento estratégico para optimizar tus procesos digitales y tecnológicos" data-en="Strategic advice to optimize your digital and technological processes">Asesoramiento estratégico para optimizar tus procesos digitales y tecnológicos</p>
+       <ul class="text-sm text-gray-500 space-y-2 text-left">
+        <li><i class="fas fa-check text-indigo-500 mr-2"></i>Auditoría digital</li>
+        <li><i class="fas fa-check text-indigo-500 mr-2"></i>Estrategia tecnológica</li>
+        <li><i class="fas fa-check text-indigo-500 mr-2"></i>Optimización de procesos</li>
+        <li><i class="fas fa-check text-indigo-500 mr-2"></i>Transformación digital</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- About Section -->
+  <section id="sobre-mi" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-fade">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent" data-es="Sobre Mí" data-en="About Me">Sobre Mí</h2>
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+       <div class="glass-card p-8 rounded-3xl">
+        <div class="w-full h-80 bg-gradient-to-br from-purple-100 via-blue-100 to-green-100 rounded-2xl flex items-center justify-center"><i class="fas fa-laptop-code text-8xl text-purple-600"></i>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-6">
+       <h3 class="text-3xl font-bold text-gray-800" data-es="Desarrollador Front-end &amp; Ingeniero de Sistemas" data-en="Front-end Developer &amp; Systems Engineer">Desarrollador Front-end &amp; Ingeniero de Sistemas</h3>
+       <p class="text-lg text-gray-600 leading-relaxed" data-es="Soy un desarrollador front-end apasionado con experiencia sólida en HTML, CSS, JavaScript y frameworks modernos. Me especializo en crear experiencias web excepcionales que combinan funcionalidad, estética y usabilidad." data-en="I am a passionate front-end developer with solid experience in HTML, CSS, JavaScript and modern frameworks. I specialize in creating exceptional web experiences that combine functionality, aesthetics and usability.">Soy un desarrollador front-end apasionado con experiencia sólida en HTML, CSS, JavaScript y frameworks modernos. Me especializo en crear experiencias web excepcionales que combinan funcionalidad, estética y usabilidad.</p>
+       <p class="text-lg text-gray-600 leading-relaxed" data-es="Mi formación como Ingeniero de Sistemas me permite abordar proyectos desde una perspectiva técnica integral, utilizando tecnologías como Python, C++ y herramientas de desarrollo avanzadas." data-en="My training as a Systems Engineer allows me to approach projects from a comprehensive technical perspective, using technologies such as Python, C++ and advanced development tools.">Mi formación como Ingeniero de Sistemas me permite abordar proyectos desde una perspectiva técnica integral, utilizando tecnologías como Python, C++ y herramientas de desarrollo avanzadas.</p>
+       <p class="text-lg text-gray-600 leading-relaxed" data-es="Con experiencia en UX/UI y diseño gráfico, creo soluciones digitales que no solo funcionan perfectamente, sino que también ofrecen experiencias memorables centradas en el usuario." data-en="With experience in UX/UI and graphic design, I create digital solutions that not only work perfectly, but also offer memorable user-centered experiences.">Con experiencia en UX/UI y diseño gráfico, creo soluciones digitales que no solo funcionan perfectamente, sino que también ofrecen experiencias memorables centradas en el usuario.</p>
+       <div class="flex flex-wrap gap-3"><span class="glass-card text-purple-700 px-6 py-3 rounded-full font-medium" data-es="Ingeniero de Sistemas" data-en="Systems Engineer">Ingeniero de Sistemas</span> <span class="glass-card text-blue-700 px-6 py-3 rounded-full font-medium" data-es="UX/UI Designer" data-en="UX/UI Designer">UX/UI Designer</span> <span class="glass-card text-green-700 px-6 py-3 rounded-full font-medium" data-es="Full Stack" data-en="Full Stack">Full Stack</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Experience Section -->
+  <section id="experiencia" class="py-20 bg-white/50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-fade">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent" data-es="Experiencia Actual" data-en="Current Experience">Experiencia Actual</h2>
+     <div class="max-w-5xl mx-auto">
+      <div class="glass-card rounded-3xl overflow-hidden shadow-xl">
+       <div class="bg-gradient-to-r from-purple-500 to-blue-500 p-8 text-white">
+        <div class="flex items-center space-x-6 mb-6">
+         <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center"><i class="fas fa-cube text-3xl"></i>
+         </div>
+         <div>
+          <h3 class="text-3xl font-bold">Telos Blockchain</h3>
+          <p class="text-purple-100 text-lg" data-es="Contribuidor de Comunidad" data-en="Community Contributor">Contribuidor de Comunidad</p>
+         </div>
+        </div>
+        <p class="text-xl text-purple-100 leading-relaxed" data-es="Blockchain de alto rendimiento para aplicaciones descentralizadas y gobernanza digital" data-en="High-performance blockchain for decentralized applications and digital governance">Blockchain de alto rendimiento para aplicaciones descentralizadas y gobernanza digital</p>
+       </div>
+       <div class="p-8">
+        <div class="mb-8">
+         <p class="text-lg text-gray-600 leading-relaxed mb-6" data-es="Telos es una blockchain innovadora que combina la velocidad de EOSIO con gobernanza avanzada y transacciones sin tarifas. Como miembro activo de la comunidad, contribuyo al crecimiento y desarrollo del ecosistema." data-en="Telos is an innovative blockchain that combines EOSIO speed with advanced governance and fee-free transactions. As an active community member, I contribute to the growth and development of the ecosystem.">Telos es una blockchain innovadora que combina la velocidad de EOSIO con gobernanza avanzada y transacciones sin tarifas. Como miembro activo de la comunidad, contribuyo al crecimiento y desarrollo del ecosistema.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+         <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center mb-4">
+           <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-search text-white"></i>
+           </div>
+           <h4 class="text-xl font-bold text-gray-800" data-es="Auditoría Técnica" data-en="Technical Auditing">Auditoría Técnica</h4>
+          </div>
+          <p class="text-gray-600" data-es="Monitoreo de endpoints, verificación de estándares operativos y reporte de incidencias para mantener la salud de la red." data-en="Endpoint monitoring, operational standards verification and incident reporting to maintain network health.">Monitoreo de endpoints, verificación de estándares operativos y reporte de incidencias para mantener la salud de la red.</p>
+         </div>
+         <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center mb-4">
+           <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-comments text-white"></i>
+           </div>
+           <h4 class="text-xl font-bold text-gray-800" data-es="Comunicación Estratégica" data-en="Strategic Communication">Comunicación Estratégica</h4>
+          </div>
+          <p class="text-gray-600" data-es="Desarrollo de mensajes bilingües para motivar la participación en propuestas de gobernanza y acciones comunitarias." data-en="Development of bilingual messages to motivate participation in governance proposals and community actions.">Desarrollo de mensajes bilingües para motivar la participación en propuestas de gobernanza y acciones comunitarias.</p>
+         </div>
+         <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center mb-4">
+           <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-graduation-cap text-white"></i>
+           </div>
+           <h4 class="text-xl font-bold text-gray-800" data-es="Educación Técnica" data-en="Technical Education">Educación Técnica</h4>
+          </div>
+          <p class="text-gray-600" data-es="Creación de guías, simuladores y contenidos educativos sobre el funcionamiento de Telos y participación en la red." data-en="Creation of guides, simulators and educational content about Telos operation and network participation.">Creación de guías, simuladores y contenidos educativos sobre el funcionamiento de Telos y participación en la red.</p>
+         </div>
+         <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center mb-4">
+           <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-users text-white"></i>
+           </div>
+           <h4 class="text-xl font-bold text-gray-800" data-es="Participación Comunitaria" data-en="Community Participation">Participación Comunitaria</h4>
+          </div>
+          <p class="text-gray-600" data-es="Representación de la visión Telos en espacios técnicos, compartiendo experiencias sobre gobernanza descentralizada." data-en="Representation of Telos vision in technical spaces, sharing experiences on decentralized governance.">Representación de la visión Telos en espacios técnicos, compartiendo experiencias sobre gobernanza descentralizada.</p>
+         </div>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3 justify-center"><span class="glass-card text-purple-700 px-4 py-2 rounded-full font-medium">Blockchain</span> <span class="glass-card text-blue-700 px-4 py-2 rounded-full font-medium">EOSIO</span> <span class="glass-card text-green-700 px-4 py-2 rounded-full font-medium" data-es="Gobernanza" data-en="Governance">Gobernanza</span> <span class="glass-card text-orange-700 px-4 py-2 rounded-full font-medium" data-es="Auditoría" data-en="Auditing">Auditoría</span> <span class="glass-card text-red-700 px-4 py-2 rounded-full font-medium" data-es="Educación" data-en="Education">Educación</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Skills Section -->
+  <section id="habilidades" class="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-fade">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h2>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Front-end -->
+      <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center"><i class="fas fa-laptop-code text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6" data-es="Front-end" data-en="Front-end">Front-end</h3>
+        <div class="space-y-4 text-sm text-gray-700">
+         <div class="flex justify-between items-center"><span class="font-medium">HTML/CSS</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">JavaScript</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">Bootstrap</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="Responsive Design" data-en="Responsive Design">Responsive Design</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Back-end -->
+      <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center"><i class="fas fa-server text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6" data-es="Back-end" data-en="Back-end">Back-end</h3>
+        <div class="space-y-4 text-sm text-gray-700">
+         <div class="flex justify-between items-center"><span class="font-medium">Python</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">C/C++</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">Make</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="Sistemas" data-en="Systems">Sistemas</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- CMS & WordPress -->
+      <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center"><i class="fab fa-wordpress text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6" data-es="CMS &amp; WordPress" data-en="CMS &amp; WordPress">CMS &amp; WordPress</h3>
+        <div class="space-y-4 text-sm text-gray-700">
+         <div class="flex justify-between items-center"><span class="font-medium">WordPress</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">Elementor</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">Divi</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="CMS Custom" data-en="Custom CMS">CMS Custom</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- UX/UI Design -->
+      <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center"><i class="fas fa-paint-brush text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6" data-es="UX/UI Design" data-en="UX/UI Design">UX/UI Design</h3>
+        <div class="space-y-4 text-sm text-gray-700">
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="User Experience" data-en="User Experience">User Experience</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="User Interface" data-en="User Interface">User Interface</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="Prototipado" data-en="Prototyping">Prototipado</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="Accesibilidad" data-en="Accessibility">Accesibilidad</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Diseño Gráfico -->
+      <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center"><i class="fas fa-palette text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6" data-es="Diseño Gráfico" data-en="Graphic Design">Diseño Gráfico</h3>
+        <div class="space-y-4 text-sm text-gray-700">
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="Diseño Visual" data-en="Visual Design">Diseño Visual</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">Branding</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="Tipografía" data-en="Typography">Tipografía</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium" data-es="Teoría del Color" data-en="Color Theory">Teoría del Color</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Herramientas Técnicas -->
+      <div class="card-hover skill-card p-8 rounded-3xl shadow-lg">
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-2xl flex items-center justify-center"><i class="fas fa-tools text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6" data-es="Herramientas" data-en="Tools">Herramientas</h3>
+        <div class="space-y-4 text-sm text-gray-700">
+         <div class="flex justify-between items-center"><span class="font-medium">Git/GitHub</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">VS Code</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">Figma</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+         <div class="flex justify-between items-center"><span class="font-medium">Terminal/CLI</span>
+          <div class="flex space-x-1">
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+           <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Portfolio Section -->
+  <section id="portafolio" class="py-20 bg-white/50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-fade">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent" data-es="Portafolio" data-en="Portfolio">Portafolio</h2>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Project 1 -->
+      <div class="project-card card-hover rounded-3xl overflow-hidden shadow-lg">
+       <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center"><i class="fas fa-gamepad text-5xl text-white"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-es="Juego de Memoria Telos" data-en="Telos Memory Game">Juego de Memoria Telos</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed" data-es="Juego interactivo de memoria con temática blockchain desarrollado con tecnologías web modernas." data-en="Interactive memory game with blockchain theme developed with modern web technologies.">Juego interactivo de memoria con temática blockchain desarrollado con tecnologías web modernas.</p>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="glass-card text-purple-700 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span> <span class="glass-card text-blue-700 px-3 py-1 rounded-full text-xs font-medium">HTML/CSS</span> <span class="glass-card text-green-700 px-3 py-1 rounded-full text-xs font-medium">Game Dev</span>
+        </div><a href="https://daniel123951.github.io/telos-memory-game/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium transition-colors" data-es="Ver Proyecto" data-en="View Project"> <span data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</span> <i class="fas fa-arrow-right ml-2"></i> </a>
+       </div>
+      </div><!-- Project 2 -->
+      <div class="project-card card-hover rounded-3xl overflow-hidden shadow-lg">
+       <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center"><i class="fas fa-chart-line text-5xl text-white"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-es="Panel Ecosistema Telos" data-en="Telos Ecosystem Panel">Panel Ecosistema Telos</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed" data-es="Panel interactivo para explorar el ecosistema Telos con visualización de datos en tiempo real." data-en="Interactive panel to explore the Telos ecosystem with real-time data visualization.">Panel interactivo para explorar el ecosistema Telos con visualización de datos en tiempo real.</p>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="glass-card text-blue-700 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span> <span class="glass-card text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Blockchain</span> <span class="glass-card text-green-700 px-3 py-1 rounded-full text-xs font-medium">Data Viz</span>
+        </div><a href="https://daniel123951.github.io/Panel-Interactivo-de-Ecosistema-Telos-/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors" data-es="Ver Proyecto" data-en="View Project"> <span data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</span> <i class="fas fa-arrow-right ml-2"></i> </a>
+       </div>
+      </div><!-- Project 3 -->
+      <div class="project-card card-hover rounded-3xl overflow-hidden shadow-lg">
+       <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center"><i class="fas fa-rocket text-5xl text-white"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-es="Explorador Espacial 3D" data-en="3D Space Explorer">Explorador Espacial 3D</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed" data-es="Experiencia interactiva 3D para explorar el espacio con controles intuitivos y gráficos inmersivos." data-en="Interactive 3D experience to explore space with intuitive controls and immersive graphics.">Experiencia interactiva 3D para explorar el espacio con controles intuitivos y gráficos inmersivos.</p>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="glass-card text-green-700 px-3 py-1 rounded-full text-xs font-medium">Three.js</span> <span class="glass-card text-purple-700 px-3 py-1 rounded-full text-xs font-medium">3D Graphics</span> <span class="glass-card text-blue-700 px-3 py-1 rounded-full text-xs font-medium">WebGL</span>
+        </div><a href="https://daniel123951.github.io/explorador-espacial-3D-interactivo/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors" data-es="Ver Proyecto" data-en="View Project"> <span data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</span> <i class="fas fa-arrow-right ml-2"></i> </a>
+       </div>
+      </div><!-- Project 4 -->
+      <div class="project-card card-hover rounded-3xl overflow-hidden shadow-lg">
+       <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center"><i class="fas fa-boxes text-5xl text-white"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-es="Sistema Inventario Boheme" data-en="Boheme Inventory System">Sistema Inventario Boheme</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed" data-es="Sistema completo de gestión de inventario para inversiones con interfaz moderna y funcional." data-en="Complete inventory management system for investments with modern and functional interface.">Sistema completo de gestión de inventario para inversiones con interfaz moderna y funcional.</p>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="glass-card text-red-700 px-3 py-1 rounded-full text-xs font-medium">HTML/CSS</span> <span class="glass-card text-orange-700 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span> <span class="glass-card text-purple-700 px-3 py-1 rounded-full text-xs font-medium" data-es="Gestión" data-en="Management">Gestión</span>
+        </div><a href="https://daniel123951.github.io/sistema-de-inventario-para-Inversiones-Boheme/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-red-600 hover:text-red-800 font-medium transition-colors" data-es="Ver Proyecto" data-en="View Project"> <span data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</span> <i class="fas fa-arrow-right ml-2"></i> </a>
+       </div>
+      </div><!-- Project 5 -->
+      <div class="project-card card-hover rounded-3xl overflow-hidden shadow-lg">
+       <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center"><i class="fas fa-users text-5xl text-white"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-es="Telos Talent DAO" data-en="Telos Talent DAO">Telos Talent DAO</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed" data-es="Plataforma descentralizada para conectar talento con oportunidades en el ecosistema Telos." data-en="Decentralized platform to connect talent with opportunities in the Telos ecosystem.">Plataforma descentralizada para conectar talento con oportunidades en el ecosistema Telos.</p>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="glass-card text-orange-700 px-3 py-1 rounded-full text-xs font-medium">DAO</span> <span class="glass-card text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Blockchain</span> <span class="glass-card text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Web3</span>
+        </div><a href="https://daniel123951.github.io/telos-talent-dao/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium transition-colors" data-es="Ver Proyecto" data-en="View Project"> <span data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</span> <i class="fas fa-arrow-right ml-2"></i> </a>
+       </div>
+      </div><!-- Project 6 -->
+      <div class="project-card card-hover rounded-3xl overflow-hidden shadow-lg">
+       <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center"><i class="fas fa-warehouse text-5xl text-white"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-es="Sistema Gestión Bodega" data-en="Warehouse Management System">Sistema Gestión Bodega</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed" data-es="Sistema completo para gestionar inventario de bodega con funcionalidades avanzadas de control." data-en="Complete system to manage warehouse inventory with advanced control functionalities.">Sistema completo para gestionar inventario de bodega con funcionalidades avanzadas de control.</p>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="glass-card text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span> <span class="glass-card text-blue-700 px-3 py-1 rounded-full text-xs font-medium" data-es="Inventario" data-en="Inventory">Inventario</span> <span class="glass-card text-purple-700 px-3 py-1 rounded-full text-xs font-medium" data-es="Gestión" data-en="Management">Gestión</span>
+        </div><a href="https://daniel123951.github.io/sistema-completo-para-gestionar-tu-bodega/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition-colors" data-es="Ver Proyecto" data-en="View Project"> <span data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</span> <i class="fas fa-arrow-right ml-2"></i> </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Pricing Section -->
+  <section id="precios" class="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-fade text-center mb-16">
+     <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent" data-es="Costos de Servicios" data-en="Service Costs">Costos de Servicios</h2>
+     <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8" data-es="Escoja su plan a crédito o contado" data-en="Choose your plan on credit or cash">Escoja su plan a crédito o contado</p><!-- Payment Toggle -->
+     <div class="flex justify-center mb-12">
+      <div class="glass-card p-2 rounded-full">
+       <div class="flex"><button id="contado-btn" class="payment-toggle active px-6 py-3 rounded-full font-medium transition-all" data-es="Contado" data-en="Cash">Contado</button> <button id="credito-btn" class="payment-toggle px-6 py-3 rounded-full font-medium transition-all" data-es="Crédito a 3 Meses" data-en="3 Month Credit">Crédito a 3 Meses</button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8"><!-- Menú Wifi -->
+     <div class="pricing-card card-hover skill-card p-8 rounded-3xl shadow-lg relative">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center"><i class="fas fa-wifi text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="Menú Wifi" data-en="Wifi Menu">Menú Wifi</h3><!-- Pricing -->
+       <div class="pricing-info mb-6">
+        <div class="contado-price">
+         <div class="text-4xl font-bold text-purple-600 mb-2">
+          $200
+         </div>
+         <div class="text-gray-500" data-es="único pago" data-en="single payment">
+          único pago
+         </div>
+        </div>
+        <div class="credito-price hidden">
+         <div class="text-4xl font-bold text-purple-600 mb-2">
+          $75
+         </div>
+         <div class="text-gray-500" data-es="por mes (3 meses)" data-en="per month (3 months)">
+          por mes (3 meses)
+         </div>
+         <div class="text-sm text-gray-400 mt-1" data-es="Total: $225" data-en="Total: $225">
+          Total: $225
+         </div>
+        </div>
+       </div>
+       <div class="text-sm text-purple-600 font-medium mb-6" data-es="Entrega en 48 horas" data-en="Delivery in 48 hours">
+        Entrega en 48 horas
+       </div>
+       <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-3"></i> <span data-es="Diseño intuitivo y Profesional" data-en="Intuitive and Professional Design">Diseño intuitivo y Profesional</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-3"></i> <span>Routerboard</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-3"></i> <span data-es="Imágenes y colores sobrios" data-en="Sober images and colors">Imágenes y colores sobrios</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-3"></i> <span data-es="3 actualizaciones gratis (6 meses)" data-en="3 free updates (6 months)">3 actualizaciones gratis (6 meses)</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-3"></i> <span data-es="PayPal / Zinli / Binance" data-en="PayPal / Zinli / Binance">PayPal / Zinli / Binance</span></li>
+       </ul><button class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all" data-es="Seleccionar Plan" data-en="Select Plan"> Seleccionar Plan </button>
+      </div>
+     </div><!-- Menú QR -->
+     <div class="pricing-card card-hover skill-card p-8 rounded-3xl shadow-lg relative border-2 border-purple-300">
+      <div class="absolute -top-4 left-1/2 transform -translate-x-1/2"><span class="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-medium" data-es="Más Popular" data-en="Most Popular">Más Popular</span>
+      </div>
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center"><i class="fas fa-qrcode text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="Menú QR" data-en="QR Menu">Menú QR</h3><!-- Pricing -->
+       <div class="pricing-info mb-6">
+        <div class="contado-price">
+         <div class="text-4xl font-bold text-blue-600 mb-2">
+          $100
+         </div>
+         <div class="text-gray-500" data-es="único pago" data-en="single payment">
+          único pago
+         </div>
+        </div>
+        <div class="credito-price hidden">
+         <div class="text-4xl font-bold text-blue-600 mb-2">
+          $40
+         </div>
+         <div class="text-gray-500" data-es="por mes (3 meses)" data-en="per month (3 months)">
+          por mes (3 meses)
+         </div>
+         <div class="text-sm text-gray-400 mt-1" data-es="Total: $120" data-en="Total: $120">
+          Total: $120
+         </div>
+        </div>
+       </div>
+       <div class="text-sm text-blue-600 font-medium mb-6" data-es="Entrega en 48 horas" data-en="Delivery in 48 hours">
+        Entrega en 48 horas
+       </div>
+       <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-3"></i> <span data-es="Diseño intuitivo y Profesional" data-en="Intuitive and Professional Design">Diseño intuitivo y Profesional</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-3"></i> <span data-es="Imágenes y colores sobrios" data-en="Sober images and colors">Imágenes y colores sobrios</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-3"></i> <span data-es="Servicio Cloud 3 años" data-en="3-year Cloud Service">Servicio Cloud 3 años</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-3"></i> <span data-es="QR digital" data-en="Digital QR">QR digital</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-3"></i> <span data-es="3 actualizaciones gratis (6 meses)" data-en="3 free updates (6 months)">3 actualizaciones gratis (6 meses)</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-3"></i> <span data-es="PayPal / Zinli / Binance" data-en="PayPal / Zinli / Binance">PayPal / Zinli / Binance</span></li>
+       </ul><button class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all" data-es="Seleccionar Plan" data-en="Select Plan"> Seleccionar Plan </button>
+      </div>
+     </div><!-- Diseño Web -->
+     <div class="pricing-card card-hover skill-card p-8 rounded-3xl shadow-lg relative">
+      <div class="text-center">
+       <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center"><i class="fas fa-globe text-3xl text-white"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-4" data-es="Diseño Web, Dominio y Hosting" data-en="Web Design, Domain and Hosting">Diseño Web, Dominio y Hosting</h3><!-- Pricing -->
+       <div class="pricing-info mb-6">
+        <div class="contado-price">
+         <div class="text-4xl font-bold text-green-600 mb-2">
+          $150
+         </div>
+         <div class="text-gray-500" data-es="único pago" data-en="single payment">
+          único pago
+         </div>
+        </div>
+        <div class="credito-price hidden">
+         <div class="text-4xl font-bold text-green-600 mb-2">
+          $55
+         </div>
+         <div class="text-gray-500" data-es="por mes (3 meses)" data-en="per month (3 months)">
+          por mes (3 meses)
+         </div>
+         <div class="text-sm text-gray-400 mt-1" data-es="Total: $165" data-en="Total: $165">
+          Total: $165
+         </div>
+        </div>
+       </div>
+       <div class="text-sm text-green-600 font-medium mb-6" data-es="Entrega de 4 a 5 días" data-en="Delivery in 4 to 5 days">
+        Entrega de 4 a 5 días
+       </div>
+       <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <span>HTML5 &amp; CSS3</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <span data-es="4 enlaces" data-en="4 links">4 enlaces</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <span data-es="Hosting y Dominio 1 año" data-en="Hosting and Domain 1 year">Hosting y Dominio 1 año</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <span data-es="Botón WhatsApp" data-en="WhatsApp Button">Botón WhatsApp</span></li>
+        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <span data-es="PayPal / Zinli / Binance" data-en="PayPal / Zinli / Binance">PayPal / Zinli / Binance</span></li>
+       </ul><button class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all" data-es="Seleccionar Plan" data-en="Select Plan"> Seleccionar Plan </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contacto" class="py-20 bg-gradient-to-br from-purple-500 via-blue-500 to-green-500 text-white">
+   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="section-fade">
+     <h2 class="text-4xl md:text-5xl font-bold mb-8" data-es="¿Listo para crear algo increíble?" data-en="Ready to create something amazing?">¿Listo para crear algo increíble?</h2>
+     <p class="text-xl text-purple-100 mb-12 max-w-3xl mx-auto leading-relaxed" data-es="Estoy disponible para nuevos proyectos y colaboraciones. Transformemos tus ideas en experiencias digitales extraordinarias que impulsen tu negocio hacia el éxito." data-en="I'm available for new projects and collaborations. Let's transform your ideas into extraordinary digital experiences that drive your business to success.">Estoy disponible para nuevos proyectos y colaboraciones. Transformemos tus ideas en experiencias digitales extraordinarias que impulsen tu negocio hacia el éxito.</p>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"><a href="https://www.linkedin.com/in/daniel-marcelo182/" target="_blank" rel="noopener noreferrer" class="card-hover glass-card p-8 rounded-3xl hover:bg-white/20 transition-all"> <i class="fab fa-linkedin text-5xl text-blue-300 mb-4"></i> <h3 class="text-xl font-bold mb-3">LinkedIn</h3><p class="text-purple-100" data-es="Conecta conmigo profesionalmente" data-en="Connect with me professionally">Conecta conmigo profesionalmente</p></a> <a href="https://github.com/Daniel123951" target="_blank" rel="noopener noreferrer" class="card-hover glass-card p-8 rounded-3xl hover:bg-white/20 transition-all"> <i class="fab fa-github text-5xl text-gray-200 mb-4"></i> <h3 class="text-xl font-bold mb-3">GitHub</h3><p class="text-purple-100" data-es="Revisa mi código y proyectos" data-en="Check my code and projects">Revisa mi código y proyectos</p></a> <a href="mailto:danielmarcelo123951@gmail.com" class="card-hover glass-card p-8 rounded-3xl hover:bg-white/20 transition-all"> <i class="fas fa-envelope text-5xl text-red-300 mb-4"></i> <h3 class="text-xl font-bold mb-3">Email</h3><p class="text-purple-100" data-es="Envíame un correo" data-en="Send me an email">Envíame un correo</p></a> <a href="https://api.whatsapp.com/send?phone=584147825840&amp;text=Hola%20Daniel,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte" target="_blank" rel="noopener noreferrer" class="card-hover glass-card p-8 rounded-3xl hover:bg-white/20 transition-all"> <i class="fab fa-whatsapp text-5xl text-green-300 mb-4"></i> <h3 class="text-xl font-bold mb-3">WhatsApp</h3><p class="text-purple-100" data-es="Escríbeme por WhatsApp" data-en="Message me on WhatsApp">Escríbeme por WhatsApp</p></a>
+     </div>
+     <div class="glass-card p-8 rounded-3xl max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-6" data-es="Servicios Disponibles" data-en="Available Services">Servicios Disponibles</h3>
+      <p class="text-purple-100 mb-8 text-lg leading-relaxed" data-es="Desde sitios web corporativos hasta aplicaciones complejas, e-commerce y estrategias de marketing digital. Cada proyecto es una oportunidad para crear algo extraordinario." data-en="From corporate websites to complex applications, e-commerce and digital marketing strategies. Each project is an opportunity to create something extraordinary.">Desde sitios web corporativos hasta aplicaciones complejas, e-commerce y estrategias de marketing digital. Cada proyecto es una oportunidad para crear algo extraordinario.</p>
+      <div class="flex flex-wrap justify-center gap-4"><span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white/30 transition-all" data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</span> <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white/30 transition-all" data-es="UX/UI Design" data-en="UX/UI Design">UX/UI Design</span> <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white/30 transition-all">E-commerce</span> <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white/30 transition-all" data-es="Marketing Digital" data-en="Digital Marketing">Marketing Digital</span> <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white/30 transition-all" data-es="Diseño Gráfico" data-en="Graphic Design">Diseño Gráfico</span> <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white/30 transition-all" data-es="Consultoría" data-en="Consulting">Consultoría</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+     <div class="mb-6 md:mb-0">
+      <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
+       Daniel Marcelo
+      </div>
+      <p class="text-gray-400" data-es="© 2025 Daniel Marcelo. Todos los derechos reservados." data-en="© 2025 Daniel Marcelo. All rights reserved.">© 2025 Daniel Marcelo. Todos los derechos reservados.</p>
+     </div>
+     <div class="flex space-x-6"><a href="https://www.linkedin.com/in/daniel-marcelo182/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-purple-400 transition-colors"> <i class="fab fa-linkedin text-2xl"></i> </a> <a href="https://github.com/Daniel123951" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors"> <i class="fab fa-github text-2xl"></i> </a> <a href="mailto:danielmarcelo123951@gmail.com" class="text-gray-400 hover:text-green-400 transition-colors"> <i class="fas fa-envelope text-2xl"></i> </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
         // Language toggle functionality
         let currentLang = 'es';
         const langToggle = document.getElementById('lang-toggle');
@@ -1013,7 +967,7 @@
         const typingTexts = {
             es: [
                 'Desarrollador Front-end',
-                'Ingeniero en Sistemas',
+                'Ingeniero de Sistemas',
                 'Especialista en UX/UI',
                 'Desarrollador Full Stack'
             ],
@@ -1022,6 +976,64 @@
                 'Systems Engineer',
                 'UX/UI Specialist',
                 'Full Stack Developer'
+            ]
+        };
+
+        // Carousel slides data
+        const carouselSlides = {
+            es: [
+                {
+                    icon: 'fas fa-globe',
+                    title: '¿Necesitas un sitio web?',
+                    description: 'Creamos sitios web modernos, rápidos y optimizados que convierten visitantes en clientes'
+                },
+                {
+                    icon: 'fas fa-mobile-alt',
+                    title: '¿La app de tus sueños?',
+                    description: 'Desarrollamos aplicaciones web progresivas que funcionan como apps nativas en cualquier dispositivo'
+                },
+                {
+                    icon: 'fas fa-chart-line',
+                    title: '¿Más seguidores?',
+                    description: 'Estrategias de marketing digital y contenido que hacen crecer tu audiencia y engagement'
+                },
+                {
+                    icon: 'fas fa-palette',
+                    title: '¿Diseño profesional?',
+                    description: 'Identidad visual completa, logos, branding y materiales gráficos que destacan tu marca'
+                },
+                {
+                    icon: 'fas fa-shopping-cart',
+                    title: '¿Vender online?',
+                    description: 'Tiendas online completas con pasarelas de pago, inventario y gestión automatizada'
+                }
+            ],
+            en: [
+                {
+                    icon: 'fas fa-globe',
+                    title: 'Need a website?',
+                    description: 'We create modern, fast and optimized websites that convert visitors into customers'
+                },
+                {
+                    icon: 'fas fa-mobile-alt',
+                    title: 'Your dream app?',
+                    description: 'We develop progressive web applications that work like native apps on any device'
+                },
+                {
+                    icon: 'fas fa-chart-line',
+                    title: 'More followers?',
+                    description: 'Digital marketing and content strategies that grow your audience and engagement'
+                },
+                {
+                    icon: 'fas fa-palette',
+                    title: 'Professional design?',
+                    description: 'Complete visual identity, logos, branding and graphic materials that highlight your brand'
+                },
+                {
+                    icon: 'fas fa-shopping-cart',
+                    title: 'Sell online?',
+                    description: 'Complete online stores with payment gateways, inventory and automated management'
+                }
             ]
         };
 
@@ -1039,6 +1051,9 @@
             
             // Restart typing animation with new language
             restartTypingAnimation();
+            
+            // Update carousel content
+            updateCarouselContent();
         }
 
         langToggle.addEventListener('click', toggleLanguage);
@@ -1108,62 +1123,39 @@
             typeWriter();
         }
 
-        // Start typing animation
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function updateCarouselContent() {
+            const currentSlides = carouselSlides[currentLang];
+            slides.forEach((slide, index) => {
+                if (currentSlides[index]) {
+                    const icon = slide.querySelector('i');
+                    const title = slide.querySelector('h3');
+                    const description = slide.querySelector('p');
+                    
+                    icon.className = `${currentSlides[index].icon} text-6xl mb-4`;
+                    title.textContent = currentSlides[index].title;
+                    description.textContent = currentSlides[index].description;
+                }
+            });
+        }
+
+        // Start animations
         typeWriter();
-
-        // Photo modal functions
-        function showPhotoInstructions() {
-            document.getElementById('photo-modal').classList.remove('hidden');
-        }
-
-        function showImageHelp() {
-            const helpMessage = currentLang === 'es' 
-                ? `Para agregar tu foto personal:
-
-1. Sube tu imagen a uno de estos servicios:
-   • Imgur.com (recomendado)
-   • Google Drive (hacer público)
-   • GitHub
-   • Cualquier hosting de imágenes
-
-2. Obtén la URL directa de la imagen
-   • En Imgur: clic derecho → "Copiar dirección de imagen"
-   • Debe terminar en .jpg, .png, .gif, etc.
-
-3. Reemplaza el enlace en el código:
-   src="TU_URL_AQUI"
-
-Consejo: Usa una imagen cuadrada (400x400px) para mejor resultado.`
-                : `To add your personal photo:
-
-1. Upload your image to one of these services:
-   • Imgur.com (recommended)
-   • Google Drive (make public)
-   • GitHub
-   • Any image hosting service
-
-2. Get the direct URL of the image
-   • On Imgur: right-click → "Copy image address"
-   • Should end with .jpg, .png, .gif, etc.
-
-3. Replace the link in the code:
-   src="YOUR_URL_HERE"
-
-Tip: Use a square image (400x400px) for best results.`;
-            
-            alert(helpMessage);
-        }
-
-        function closePhotoModal() {
-            document.getElementById('photo-modal').classList.add('hidden');
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('photo-modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePhotoModal();
-            }
-        });
+        setInterval(nextSlide, 4000); // Change slide every 4 seconds
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
@@ -1198,27 +1190,254 @@ Tip: Use a square image (400x400px) for best results.`;
             });
 
             navLinks.forEach(link => {
-                link.classList.remove('text-blue-600');
+                link.classList.remove('text-purple-600');
                 if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('text-blue-600');
+                    link.classList.add('text-purple-600');
                 }
             });
         });
 
-        // Project card interactions
-        document.querySelectorAll('.project-card button').forEach(button => {
+        // Initialize carousel content
+        updateCarouselContent();
+
+        // Pricing toggle functionality
+        const contadoBtn = document.getElementById('contado-btn');
+        const creditoBtn = document.getElementById('credito-btn');
+        const contadoPrices = document.querySelectorAll('.contado-price');
+        const creditoPrices = document.querySelectorAll('.credito-price');
+
+        function showContadoPrices() {
+            contadoBtn.classList.add('active');
+            creditoBtn.classList.remove('active');
+            contadoPrices.forEach(price => price.classList.remove('hidden'));
+            creditoPrices.forEach(price => price.classList.add('hidden'));
+        }
+
+        function showCreditoPrices() {
+            creditoBtn.classList.add('active');
+            contadoBtn.classList.remove('active');
+            creditoPrices.forEach(price => price.classList.remove('hidden'));
+            contadoPrices.forEach(price => price.classList.add('hidden'));
+        }
+
+        contadoBtn.addEventListener('click', showContadoPrices);
+        creditoBtn.addEventListener('click', showCreditoPrices);
+
+        // Plan selection functionality with payment methods
+        document.querySelectorAll('.pricing-card button').forEach(button => {
             button.addEventListener('click', function() {
-                const projectTitle = this.closest('.project-card').querySelector('h3').textContent;
-                const message = currentLang === 'es' 
-                    ? `Funcionalidad de "${projectTitle}" estará disponible próximamente. ¡Gracias por tu interés!`
-                    : `"${projectTitle}" functionality will be available soon. Thank you for your interest!`;
-                alert(message);
+                const card = this.closest('.pricing-card');
+                const planName = card.querySelector('h3').textContent;
+                const isCredito = !creditoPrices[0].classList.contains('hidden');
+                const paymentType = isCredito ? 'crédito' : 'contado';
+                
+                // Get price info
+                const priceElement = card.querySelector(isCredito ? '.credito-price .text-4xl' : '.contado-price .text-4xl');
+                const price = priceElement.textContent;
+                
+                // Show payment method selection modal
+                showPaymentModal(planName, paymentType, price);
             });
         });
+
+        // Payment modal functionality
+        function showPaymentModal(planName, paymentType, price) {
+            const modalHTML = `
+                <div id="payment-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Selecciona tu método de pago</h3>
+                            <p class="text-gray-600">
+                                <span class="font-semibold">${planName}</span> - ${price} (${paymentType})
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            <button onclick="selectPaymentMethod('paypal', '${planName}', '${paymentType}', '${price}')" 
+                                    class="w-full flex items-center justify-between p-4 border-2 border-gray-200 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
+                                        <i class="fab fa-paypal text-white text-xl"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <div class="font-semibold text-gray-800">PayPal</div>
+                                        <div class="text-sm text-gray-500">danielpaypal123951@gmail.com</div>
+                                    </div>
+                                </div>
+                                <i class="fas fa-chevron-right text-gray-400"></i>
+                            </button>
+                            
+                            <button onclick="selectPaymentMethod('zinli', '${planName}', '${paymentType}', '${price}')" 
+                                    class="w-full flex items-center justify-between p-4 border-2 border-gray-200 rounded-2xl hover:border-purple-500 hover:bg-purple-50 transition-all">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mr-4">
+                                        <i class="fas fa-credit-card text-white text-xl"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <div class="font-semibold text-gray-800">Zinli</div>
+                                        <div class="text-sm text-gray-500">danielmarcelo123951@gmail.com</div>
+                                    </div>
+                                </div>
+                                <i class="fas fa-chevron-right text-gray-400"></i>
+                            </button>
+                            
+                            <button onclick="selectPaymentMethod('binance', '${planName}', '${paymentType}', '${price}')" 
+                                    class="w-full flex items-center justify-between p-4 border-2 border-gray-200 rounded-2xl hover:border-yellow-500 hover:bg-yellow-50 transition-all">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center mr-4">
+                                        <i class="fab fa-bitcoin text-white text-xl"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <div class="font-semibold text-gray-800">Binance</div>
+                                        <div class="text-sm text-gray-500">ID: 197 250 420</div>
+                                    </div>
+                                </div>
+                                <i class="fas fa-chevron-right text-gray-400"></i>
+                            </button>
+                        </div>
+                        
+                        <button onclick="closePaymentModal()" 
+                                class="w-full py-3 text-gray-600 hover:text-gray-800 font-medium transition-colors">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+        }
+
+        function selectPaymentMethod(method, planName, paymentType, price) {
+            let paymentInfo = '';
+            let methodName = '';
+            
+            switch(method) {
+                case 'paypal':
+                    paymentInfo = 'danielpaypal123951@gmail.com';
+                    methodName = 'PayPal';
+                    break;
+                case 'zinli':
+                    paymentInfo = 'danielmarcelo123951@gmail.com';
+                    methodName = 'Zinli';
+                    break;
+                case 'binance':
+                    paymentInfo = 'ID: 197 250 420';
+                    methodName = 'Binance';
+                    break;
+            }
+            
+            // Create customer WhatsApp message
+            const customerMessage = `Hola Daniel, quiero contratar el plan "${planName}" a ${paymentType} por ${price}. Voy a pagar por ${methodName} (${paymentInfo}). ¿Podrías confirmarme los detalles?`;
+            const customerWhatsappUrl = `https://api.whatsapp.com/send?phone=584147825840&text=${encodeURIComponent(customerMessage)}`;
+            
+            // Create notification message for Daniel
+            const notificationMessage = `🔔 NUEVA SOLICITUD DE SERVICIO\n\nCliente interesado en:\n📋 Plan: ${planName}\n💰 Precio: ${price} (${paymentType})\n💳 Método de pago: ${methodName}\n📧 Datos de pago: ${paymentInfo}\n\n¡Contacta al cliente para confirmar!`;
+            const notificationWhatsappUrl = `https://api.whatsapp.com/send?phone=584147825840&text=${encodeURIComponent(notificationMessage)}`;
+            
+            closePaymentModal();
+            showConfirmationMessage(methodName, paymentInfo, customerWhatsappUrl, notificationWhatsappUrl);
+        }
+
+        function showConfirmationMessage(methodName, paymentInfo, customerUrl, notificationUrl) {
+            const confirmationHTML = `
+                <div id="confirmation-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-check text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">¡Perfecto!</h3>
+                            <p class="text-gray-600 mb-4">Método de pago seleccionado:</p>
+                            <div class="bg-gray-50 p-4 rounded-2xl mb-4">
+                                <div class="font-semibold text-gray-800">${methodName}</div>
+                                <div class="text-sm text-gray-600">${paymentInfo}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <button onclick="window.open('${customerUrl}', '_blank', 'noopener,noreferrer'); closeConfirmationModal();" 
+                                    class="w-full gradient-accent text-white py-4 rounded-2xl font-medium hover:shadow-lg transition-all">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                Contactar por WhatsApp
+                            </button>
+                            
+                            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4 mt-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-info-circle text-blue-500 mt-1 mr-3"></i>
+                                    <div class="text-sm text-blue-700">
+                                        <p class="font-semibold mb-1">Proceso de pago:</p>
+                                        <p>1. Contacta por WhatsApp para coordinar</p>
+                                        <p>2. Daniel te enviará el enlace de pago directo</p>
+                                        <p>3. Realiza el pago de forma segura</p>
+                                        <p>4. ¡Comenzamos tu proyecto!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="copyPaymentInfo('${paymentInfo}')" 
+                                    class="w-full glass-card text-purple-700 hover:bg-purple-50 py-4 rounded-2xl font-medium transition-all">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copiar datos de pago
+                            </button>
+                            
+                            <button onclick="closeConfirmationModal()" 
+                                    class="w-full py-3 text-gray-600 hover:text-gray-800 font-medium transition-colors">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', confirmationHTML);
+            
+            // Send notification to Daniel automatically (opens in new tab)
+            setTimeout(() => {
+                // Open notification WhatsApp in a new tab
+                const notificationWindow = window.open(notificationUrl, '_blank', 'noopener,noreferrer');
+                
+                // Show confirmation that notification was sent
+                setTimeout(() => {
+                    const statusDiv = document.createElement('div');
+                    statusDiv.innerHTML = `
+                        <div class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+                            <i class="fas fa-check mr-2"></i>
+                            Notificación enviada a Daniel
+                        </div>
+                    `;
+                    document.body.appendChild(statusDiv);
+                    
+                    setTimeout(() => {
+                        statusDiv.remove();
+                    }, 3000);
+                }, 500);
+            }, 1000);
+        }
+
+        function copyPaymentInfo(info) {
+            navigator.clipboard.writeText(info).then(() => {
+                const button = event.target.closest('button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>¡Copiado!';
+                button.classList.add('bg-green-50', 'text-green-700');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-50', 'text-green-700');
+                }, 2000);
+            });
+        }
+
+        function closePaymentModal() {
+            const modal = document.getElementById('payment-modal');
+            if (modal) modal.remove();
+        }
+
+        function closeConfirmationModal() {
+            const modal = document.getElementById('confirmation-modal');
+            if (modal) modal.remove();
+        }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9931e357829c6e78',t:'MTc2MTIyOTM2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'996b05d88122492b',t:'MTc2MTgyODQ2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
-
 
